@@ -24,7 +24,7 @@ const WhyUs = () => {
     <main className="w-11/12 mx-auto  my-20">
       <div className="flex justify-between">
         <section className="w-[50%]">
-          <h2 className="font-bold text-gradient text-xl uppercase mb-6">
+          <h2 className="text-gradient uppercase font-bold text-xl border-b w-fit mb-6 ">
             Why Us
           </h2>
           <h1 className="text-5xl font-bold leading-[1.1em]">
@@ -43,7 +43,7 @@ const WhyUs = () => {
 
 
         <section className="flex gap-4">
-           <div className=" space-y-10">
+           <div className=" space-y-6">
            {whyusdata.slice(0,2).map((item,index) => (
                 <div key={index} className="border border-[#00AFF0] rounded-2xl w-80 p-4">
                      <div className="h-10 w-10 rounded-full bg-black mb-6"></div>
@@ -54,7 +54,7 @@ const WhyUs = () => {
            </div>
            
 
-           <div className="mt-10 space-y-10">
+           <div className="mt-10 space-y-6">
            {whyusdata.slice(2,4).map((item,index) => (
                 <div key={index} className="border border-[#CC1587] rounded-2xl w-80 p-4">
                      <div className="h-10 w-10 rounded-full bg-black mb-6"></div>

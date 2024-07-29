@@ -1,18 +1,10 @@
 import React from 'react'
-import HeroSection from './pages/Home/HeroSection'
-import AboutUs from './pages/Home/AboutUs'
-import WhyUs from './pages/Home/WhyUs'
-import Chairmanmssg from './pages/Home/Chairmanmssg'
-import OurServices from './pages/Home/OurServices'
+import Page from './Home/Page'
 
 const page = () => {
   return (
     <div>
-            <HeroSection/>
-            <AboutUs/>
-            <WhyUs/>
-            <Chairmanmssg/>
-            <OurServices/>
+          <Page/>
     </div>
   )
 }

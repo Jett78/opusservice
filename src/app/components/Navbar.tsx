@@ -1,6 +1,7 @@
-"use client"
-import gsap from "gsap";
+"use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const navdata = [
   {
@@ -9,63 +10,63 @@ const navdata = [
   },
   {
     title: "About",
-    path: "/about",
+    path: "/About",
   },
   {
     title: "Services",
-    path: "/services",
+    path: "/Services",
   },
   {
     title: "Career",
-    path: "/career",
+    path: "/Career",
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "/Blog",
   },
   {
     title: "Contact us",
-    path: "/contact",
+    path: "/Contact",
   },
 ];
 
 const Navbar = () => {
-
-    const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the page is scrolled down
       if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
-    // Add event listener
-    window.addEventListener("scroll", handleScroll);
-    // Cleanup event listener on component unmount
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    
+    if (router.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
-  useEffect(() => {
-    gsap.to(".navbar", {
-      backgroundColor: isScrolled ? "#1E1E1E" : "",
-      duration: 0.5,
-    });
-  }, [isScrolled]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [router.pathname]);
 
   return (
-    <main className="navbar text-white flex justify-between fixed top-0 left-0 w-full items-center py-6 px-20 z-50">
+    <main
+      className={`navbar text-white flex justify-between fixed top-0 left-0 w-full items-center py-6 px-20 z-50 ${
+        router.pathname === "/" && isScrolled ? "bg-[#1E1E1E]" : "bg-black"
+      }`}
+    >
       <figure>
         <h2>Logo</h2>
       </figure>
 
       <nav className="flex gap-8">
-        {navdata.map((items,index) => (
-            <div key={index} className="list-none">
-                <li className="text-[16px] font-semibold">{items.title}</li>
-            </div>
+        {navdata.map((items, index) => (
+          <div key={index} className="list-none">
+            <Link href={items.path}>{items.title}</Link>
+          </div>
         ))}
       </nav>
     </main>

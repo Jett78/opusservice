@@ -27,7 +27,7 @@ const AboutUs:React.FC = () => {
      <div className="w-11/12 mx-auto mt-20 mb-40">
       <section className="flex justify-between items-center">
         <div className="w-[50%]">
-          <h2 className="font-bold text-gradient text-xl uppercase mb-6">About Us</h2>
+          <h2 className="text-gradient uppercase font-bold text-xl border-b w-fit mb-6 ">About Us</h2>
           <h1 className="text-5xl font-bold leading-[1.1em]">
             Outsourcing and outstaffing solutions for sustainable
             <span className="text-gradient"> Business Growth.</span>
@@ -65,7 +65,9 @@ const AboutUs:React.FC = () => {
       </section> */}
    
     </div>
-    <div className="bg-parallax bg-fixed h-[60vh] bg-cover"></div>
+
+    {/* parallax background */}
+    <div className="bg-parallax bg-fixed h-[50vh] bg-cover"></div>
    </main>
   );
 };

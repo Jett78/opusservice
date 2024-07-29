@@ -13,6 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         'parallax': 'url("/parallax.jpg")',
+        'parallax2': 'url("/parallax2.jpg")',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
