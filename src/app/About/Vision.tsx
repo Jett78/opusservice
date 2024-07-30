@@ -61,15 +61,17 @@ const Vision = () => {
             </div>
         ))}
       </div>
-      <div className="flex justify-center gap-8 mt-10 w-11/12 mx-auto">
+
+
+      <div className="flex justify-center gap-8 my-20 w-11/12 mx-auto">
         {aboutdata.map((item, index) => (
           <div key={index}>
             <div
-              className="rounded-2xl w-80 p-4"
+              className="rounded-2xl w-[22em] h-full p-4 relative"
               style={{ border: `2px solid ${item.border}` }}>
-              <div className="h-10 w-10 rounded-full bg-black mb-6"></div>
-              <h2 className="font-bold text-2xl">{item.title}</h2>
-              <p className="font-medium text-lighttext text-sm my-2">
+              <div className="h-20 w-20 rounded-full gradient mb-6 absolute -top-10 left-1/2 -translate-x-1/2"></div>
+              <h2 className="font-bold text-3xl text-center mt-10">{item.title}</h2>
+              <p className="font-medium text-lighttext text-sm my-4 leading-6">
                 {item.desc}
               </p>
             </div>

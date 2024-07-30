@@ -105,7 +105,7 @@ const page = () => {
 
             <div className="flex justify-between items-center">
                 <p className="font-semibold text-md">{item.updatedon} days ago</p>
-                <button className="button-gradient">Apply Now</button>
+                <button className="text-gradient font-bold text-l">Apply Now</button>
             </div>
           </div>
         ))}

@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary:"#CC1587",
+        secondary:"#26538C",
+        tertiary:"#00AFF0",
         lighttext: "#7E7E7E",
       },
       backgroundImage: {
+        'chairman':'url("/chairman.jpg")',
         'parallax': 'url("/parallax.jpg")',
         'parallax2': 'url("/parallax2.jpg")',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

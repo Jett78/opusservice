@@ -5,25 +5,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const TrustComponent = () => {
+const Slides = () => {
   const settings = {
     dots: false,
     arrows:false,
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    pauseOnHover: false, // Continue sliding when hovered
-
-  };
-  const settings2 = {
-    dots: false,
-    arrows:false,
-    infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -32,30 +19,17 @@ const TrustComponent = () => {
     rtl: true,// Add this line to change the slide direction
     pauseOnHover: false, // Continue sliding when hovered
 
-
   };
+
   return (
     <main className="my-28">
-      <h2 className="font-bold text-2xl w-fit mx-auto uppercase">
-        {" "}
-        <span className="text-gradient font-extrabold">Trusted </span>by 1000+
-        Companies
-      </h2>
+      <div className=" px-10 mt-10 relative ">
+        <div className="absolute left-0 top-0 w-[15rem] z-30 bg-gradient-to-r from-white via-white  to-transparent h-full"></div>
+        <div className="absolute right-0 top-0 w-[15rem] z-30 bg-gradient-to-l from-white via-white  to-transparent h-full"></div>
 
-      <div className=" mx-40 px-20 mt-10">
       <Slider {...settings}>
         {companies.map((item,index) => (
-            <div key={index}>
-                <Image src={item.img} alt="icons-company" width={100} height={100} className=' object-cover rounded-lg' />
-            </div>
-        ))}
-        </Slider>
-      </div>
-
-      <div className=" mx-40 px-20 mt-6">
-      <Slider {...settings2}>
-        {companies.map((item,index) => (
-            <div key={index}>
+            <div key={index} className="">
                 <Image src={item.img} alt="icons-company" width={100} height={100} className=' object-cover rounded-lg' />
             </div>
         ))}
@@ -65,7 +39,7 @@ const TrustComponent = () => {
   );
 };
 
-export default TrustComponent;
+export default Slides;
 
 const companies = [
   {

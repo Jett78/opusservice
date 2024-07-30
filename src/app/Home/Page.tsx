@@ -6,6 +6,7 @@ import Chairmanmssg from './Chairmanmssg'
 import OurServices from './OurServices'
 import Testimoinals from './Testimoinals'
 import Contactus from './Contactus'
+import Slider from './Slides'
 const Page = () => {
   return (
     <div>
@@ -13,8 +14,9 @@ const Page = () => {
             <AboutUs/>
             <WhyUs/>
             <Chairmanmssg/>
-            <OurServices/>
+            {/* <OurServices/> */}
             <Testimoinals/>
+            <Slider/>
             <Contactus/>
     </div>
   )
