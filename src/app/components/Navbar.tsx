@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const navdata = [
   {
@@ -54,7 +56,7 @@ const Navbar = () => {
 
   return (
     <main
-      className={`navbar text-white flex justify-between fixed top-0 left-0 w-full items-center py-6 px-20 z-50 ${
+      className={`navbar text-white flex justify-between fixed top-0 left-0 w-full items-center py-6 md:px-20 px-6 z-50 ${
         router.pathname === "/" && isScrolled ? "bg-[#1E1E1E]" : "bg-black"
       }`}
     >
@@ -62,13 +64,18 @@ const Navbar = () => {
         <h2>Logo</h2>
       </figure>
 
-      <nav className="flex gap-8">
+      <nav className="gap-10 md:flex hidden">
         {navdata.map((items, index) => (
           <div key={index} className="list-none">
-            <Link href={items.path}>{items.title}</Link>
+            <Link href={items.path} className="font-semibold ">{items.title}</Link>
           </div>
         ))}
       </nav>
+
+      <div className="md:hidden block">
+      <GiHamburgerMenu />
+
+      </div>
     </main>
   );
 };

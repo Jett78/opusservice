@@ -9,20 +9,20 @@ const blogdata= [
         time:"12 July 2024",
     },
     {
-        img:"/servicesimg/services1.jpg",
+        img:"/servicesimg/services2.jpg",
         title:"What is Remote Closing & Why You Need a Remote Closer",
         desc:" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
         time:"12 July 2024",
     },
     {
-        img:"/servicesimg/services1.jpg",
-        title:"What is Remote Closing & Why You Need a Remote Closer",
+        img:"/servicesimg/services3.jpg",
+        title:"Strategic Palnning with Financial Management",
         desc:" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
         time:"12 July 2024",
     },
     {
-        img:"/servicesimg/services1.jpg",
-        title:"What is Remote Closing & Why You Need a Remote Closer",
+        img:"/servicesimg/services4.jpg",
+        title:"Long-term strategic plan with business goals",
         desc:" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
         time:"12 July 2024",
     },
@@ -39,13 +39,16 @@ const page = () => {
         eos.
       </p>
 
-      <div className="grid grid-cols-4 gap-8 w-11/12 mx-auto my-10">
+      <div className="grid grid-cols-3 gap-8 w-11/12 mx-auto my-10">
         {blogdata.map((item,index) => (
-          <div key={index} className="border p-2">
+          <div key={index} className=" p-2">
              <Image src={item.img} alt="team" width={700} height={1000} className='h-80 object-cover rounded-lg' />
              <div className="py-4">
-              <h2 className="font-semibold text-xl">{item.title}</h2>
-              <p className="text-sm font-medium text-lighttext">{item.desc}</p>
+              <h2 className="font-bold text-xl">{item.title}</h2>
+              <p className="text-[14px] py-2 font-medium text-lighttext">{item.desc}</p>
+              <div>
+                <h2>{item.time}</h2>
+              </div>
               <div>
 
               </div>

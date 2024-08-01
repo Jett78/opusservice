@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@tabler/icons-react": "^3.11.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.19",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.9",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
@@ -18,7 +23,9 @@
     "react-router": "^6.25.1",
     "react-router-dom": "^6.25.1",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "split-type": "^0.3.4",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",

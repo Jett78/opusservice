@@ -22,8 +22,8 @@ const Slides = () => {
   };
 
   return (
-    <main className="my-28">
-      <div className=" px-10 mt-10 relative ">
+    <main className="my-28 max-w-screen">
+      <div className=" mt-10 relative">
         <div className="absolute left-0 top-0 w-[15rem] z-30 bg-gradient-to-r from-white via-white  to-transparent h-full"></div>
         <div className="absolute right-0 top-0 w-[15rem] z-30 bg-gradient-to-l from-white via-white  to-transparent h-full"></div>
 

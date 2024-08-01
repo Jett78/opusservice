@@ -7,8 +7,9 @@ const Page = () => {
   return (
     <div className='pt-28 '>
       <Vision/>
-      <OurTeam/>
       <TrustComponent/>
+      <OurTeam/>
+  
     </div>
   )
 }

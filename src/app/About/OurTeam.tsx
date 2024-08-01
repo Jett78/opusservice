@@ -25,7 +25,7 @@ const OurTeam = () => {
                 width={700}
                 height={1000}
                 className={`h-[50vh] object-cover ease-in-out duration-300 ${
-                  hoveredIndex === index ? "brightness-90 scale-105" : ""
+                  hoveredIndex === index ? "grayscale scale-105" : ""
                 }`}
               />
             </div>
@@ -34,12 +34,14 @@ const OurTeam = () => {
                 hoveredIndex === index ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="flex gap-20">
+              <div className="grid place-items-center whitespace-nowrap py-2 ">
                 <h2 className="font-bold text-xl">{item.name}</h2>
-                <h3 className="font-medium text-l">{item.role}</h3>
+                <h3 className="font-semibold  text-sm italic tracking-wide">{item.role}</h3>
               </div>
             </div>
-            <div
+
+            {/* social media icon */}
+            {/* <div
               className={`absolute top-0 left-2 flex justify-center my-2 gap-4 transition-opacity duration-300 ${
                 hoveredIndex === index ? "opacity-100" : "opacity-0"
               }`}
@@ -50,7 +52,7 @@ const OurTeam = () => {
                 height={30}
                 alt="icon"
               />
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -67,14 +69,14 @@ const teamdata = [
       role: "Chief Executive Officer",
     },
     {
-      name: "Jane Doe",
+      name: "Alander Doe",
       img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
+      role: "Chief Marketting Officer",
     },
     {
-      name: "Jane Doe",
+      name: "Rajesh Hamal",
       img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
+      role: "Chief Technical Officer",
     },
     {
       name: "Jane Doe",

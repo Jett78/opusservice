@@ -1,58 +1,125 @@
-import React from "react";
-import { MdArrowOutward } from "react-icons/md";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+"use client";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
-const aboutdata = [
-  {
-    title: "HR Management",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendisodio aut porro provident placeat, aliquid tempora ea unde earumneque incidunt est, ratione nostrum. Expedita consequatur doloremlabore beatae aut!",
-  },
-  {
-    title: "Better Workflow & Efficiency",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendisodio aut porro provident placeat, aliquid tempora ea unde earumneque incidunt est, ratione nostrum. Expedita consequatur doloremlabore beatae aut!",
-  },
-  {
-    title: "Significant Cost Reduction",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendisodio aut porro provident placeat, aliquid tempora ea unde earumneque incidunt est, ratione nostrum. Expedita consequatur doloremlabore beatae aut!",
-  },
-  {
-    title: "24/7 Operations & Support",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendisodio aut porro provident placeat, aliquid tempora ea unde earumneque incidunt est, ratione nostrum. Expedita consequatur doloremlabore beatae aut!",
-  },
-];
-
+gsap.registerPlugin(ScrollTrigger);
 const AboutUs: React.FC = () => {
+  const counterRef = useRef();
+  const aboutContainer = useRef();
+
+  useGSAP(() => {
+    const descSplit = new SplitType(".about-desc");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutContainer.current,
+        start: "top 80%",
+        end: "bottom 80%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+
+    tl.from(".about", {
+      opacity: 1,
+      y: 24,
+      duration: 2,
+    });
+    tl.from(".header", {
+      opacity: 0,
+      x: 20,
+      duration: 2,
+    });
+
+    tl.from(
+      descSplit.chars,
+      {
+        y: 20,
+        duration: 2,
+        opacity: 0,
+        stagger: 0.2,
+      },
+      "<"
+    );
+
+    //img-reveal animation
+    gsap.fromTo(
+      ".about-img-animate",
+      {
+        clipPath: "inset(0 0 100% 0)",
+        opacity: 1,
+      },
+      {
+        clipPath: "inset(0 0 0% 0)",
+        opacity: 1,
+        duration: 4,
+        scrollTrigger: {
+          trigger: ".about-img-animate",
+          start: "top 70%",
+          end: "bottom bottom",
+          scrub: 1,
+          // markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".parallaxbg",
+      {
+        clipPath: "inset(0 0 100% 0)",
+        opacity: 1,
+      },
+      {
+        clipPath: "inset(0 0 0% 0)",
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".parallaxbg",
+          start: "top bottom",
+          end: "50% 50%",
+          scrub: 1,
+          // markers: true,
+        },
+      }
+    );
+  });
+
   return (
     <main>
-      <div className="flex justify-center gap-60 font-sans items-center py-6 bg-secondary text-white">
-        {details.map((item, index) => (
-          <div key={index} className="grid place-items-center">
-            <h3 className="font-bold text-2xl ">{item.text}</h3>
-            <h2 className="font-bold text-3xl">{item.num}</h2>
-          </div>
-        ))}
-      </div>
-
-      <div className="w-11/12 mx-auto mt-20 mb-40">
-        <section className="flex justify-between items-center">
-          <div className="w-[50%]">
-            <h2 className="text-gradient uppercase font-bold text-xl border-b w-fit mb-6 ">
+      <div className="w-11/12 mx-auto my-20" ref={aboutContainer}>
+        <section className="flex flex-wrap justify-between items-start ">
+          <div className="max-w-[50%] sticky top-[10em]">
+            <div className="h-[24px] overflow-hidden mb-2">
+              {/* <h2 className="about text-gradient uppercase font-bold text-xl border-b w-fit mb-6 ">
               About Us
-            </h2>
-            <h1 className="text-5xl font-bold leading-[1.1em]">
+            </h2> */}
+            </div>
+            <h1 className="header lg:text-5xl md:text-3xl sm:text-2xl text-xl font-bold leading-[1.1em]">
               Outsourcing and outstaffing solutions for sustainable
               <span className="text-gradient"> Business Growth.</span>
             </h1>
           </div>
 
-          <div className="w-[40%]">
-            <p className="font-medium text-lighttext ">
+          <div className="about-img-animate w-[45%]">
+            {/* <img
+              src="./chairman.jpg"
+              alt="chairman"
+              className="rounded-lg w-[60em] h-[35em] object-cover brightness-75"
+            /> */}
+
+            <p className="about-desc font-medium text-lighttext my-6">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Reiciendis odio aut porro provident placeat, aliquid tempora ea
               unde earum neque incidunt est, ratione nostrum. Expedita
-              consequatur dolorem labore beatae aut!
+              consequatur dolorem labore beatae aut! Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Reiciendis odio aut porro provident
+              placeat, aliquid tempora ea unde earum neque incidunt est, ratione
+              nostrum. Expedita consequatur dolorem labore beatae aut!
             </p>
-            <button className="mt-4 font-semibold flex items-center">
+            <button className="mt-4 font-semibold flex items-center animate-bounce">
               <p className="text-gradient ">Read More</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,27 +133,37 @@ const AboutUs: React.FC = () => {
                 />
               </svg>
             </button>
+            <div className="text-black grid grid-cols-2 items-center justify-center gap-10 py-10">
+              {details.map((item, index) => (
+                <div key={index} className="grid place-items-center">
+                  <h2 className="font-extrabold text-6xl" ref={counterRef}>
+                    {item.num}
+                  </h2>
+                  <h3 className="font-extrabold text-l uppercase pt-2 text-gradient">
+                    {item.text}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-
-        {/* <section className="flex justify-between items-center mt-10">
-        <div>
-          <img src="./about.png" alt="about-img" />
-        </div>
-
-        <div className="grid gap-6">
-          {aboutdata.map((item,index) => (
-            <div key={index} className="flex justify-between border-b p-2">
-                 <h2 className="text-4xl font-semibold">{item.title}</h2>
-                 <MdOutlineKeyboardArrowDown />
-            </div>
-          ))}
-        </div>
-      </section> */}
       </div>
 
       {/* parallax background */}
-      {/* <div className="bg-parallax bg-fixed h-[50vh] bg-cover"></div> */}
+      <div className="parallaxbg bg-parallax2 bg-fixed h-[50vh] bg-cover bg-black bg-blend-overlay bg-opacity-50">
+        {/* <div className="text-white flex items-center justify-center gap-28 py-16">
+          {details.map((item, index) => (
+            <div key={index} className="grid place-items-center">
+              <h2 className="font-extrabold text-6xl" ref={counterRef}>
+                {item.num}
+              </h2>
+              <h3 className="font-extrabold text-l uppercase pt-2">
+                {item.text}
+              </h3>
+            </div>
+          ))}
+        </div> */}
+      </div>
     </main>
   );
 };
@@ -95,15 +172,19 @@ export default AboutUs;
 
 const details = [
   {
-    num: "9858457895",
-    text: "Call us at",
+    num: "2010",
+    text: "Incorporation year",
   },
   {
-    num: "example@yahoo.com",
-    text: "Email",
+    num: "6+",
+    text: "Global Location",
   },
   {
-    num: "9am - 6pm",
-    text: "Open Hours",
+    num: "5000+",
+    text: "Clients Served",
+  },
+  {
+    num: "45,000+",
+    text: "Total Deployed",
   },
 ];

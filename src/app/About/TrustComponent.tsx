@@ -37,12 +37,11 @@ const TrustComponent = () => {
   return (
     <main className="my-28">
       <h2 className="font-bold text-2xl w-fit mx-auto uppercase">
-        {" "}
         <span className="text-gradient font-extrabold">Trusted </span>by 1000+
         Companies
       </h2>
 
-      <div className=" mx-40 px-20 mt-10">
+      <div className=" mt-10">
       <Slider {...settings}>
         {companies.map((item,index) => (
             <div key={index}>
@@ -52,7 +51,7 @@ const TrustComponent = () => {
         </Slider>
       </div>
 
-      <div className=" mx-40 px-20 mt-6">
+      <div className=" mt-6">
       <Slider {...settings2}>
         {companies.map((item,index) => (
             <div key={index}>
