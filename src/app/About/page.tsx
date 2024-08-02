@@ -5,7 +5,7 @@ import TrustComponent from './TrustComponent'
 
 const Page = () => {
   return (
-    <div className='pt-28 '>
+    <div className='pt-10'>
       <Vision/>
       <TrustComponent/>
       <OurTeam/>

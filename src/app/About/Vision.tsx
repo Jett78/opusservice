@@ -1,6 +1,7 @@
 import React from "react";
 import { TbDeviceVisionPro } from "react-icons/tb";
 import { GoGoal } from "react-icons/go";
+import Image from "next/image";
 
 const Vision = () => {
   return (
@@ -8,10 +9,10 @@ const Vision = () => {
       <h2 className="text-gradient uppercase font-extrabold text-3xl w-fit mx-auto mb-10 ">
               About Us
             </h2>
-        <section className="w-11/12 mx-auto flex flex-row-reverse justify-between items-start">
-          <div className="w-[50%]">
+        <section className="w-11/12 mx-auto flex flex-wrap flex-row-reverse justify-between items-start">
+          <div className="sm:w-[50%]">
             <div className="h-[24px] overflow-hidden mb-2"></div>
-            <h1 className="header text-5xl font-bold leading-[1.1em]">
+            <h1 className="header sm:text-5xl text-2xl font-bold leading-[1.1em]">
               Outsourcing and outstaffing solutions for sustainable
               <span className="text-gradient"> Business Growth.</span>
             </h1>
@@ -37,24 +38,26 @@ const Vision = () => {
             </p>
           </div>
 
-          <div className="about-img-animate w-[45%]">
-            <img
-              src="./chairman.jpg"
+          <div className="about-img-animate sm:w-[45%] md:block hidden">
+            <Image
+              src="/chairman.jpg"
               alt="chairman"
-              className="rounded-lg w-[60em] h-[35em] object-cover brightness-75"
+              height={1000}
+              width={1000}
+              className="rounded-lg sm:w-[60em] sm:h-[35em] object-cover brightness-75"
             />
           </div>
         </section>
 
          {/* parallax background */}
-      <div className="parallaxbg bg-parallax2 bg-fixed h-[30vh] bg-cover bg-black bg-blend-overlay bg-opacity-50 my-20">
-        <div className="text-white flex items-center justify-center gap-28 py-16">
+      <div className="parallaxbg bg-parallax2 bg-fixed sm:h-[30vh] bg-cover bg-black bg-blend-overlay bg-opacity-50 my-20">
+        <div className="text-white grid sm:grid-cols-4 grid-cols-2 items-center justify-center gap-x-4 gap-y-14 py-16">
           {details.map((item, index) => (
             <div key={index} className="grid place-items-center">
-              <h2 className="font-extrabold text-6xl">
+              <h2 className="font-extrabold sm:text-6xl text-3xl">
                 {item.num}
               </h2>
-              <h3 className="font-extrabold text-l uppercase pt-2">
+              <h3 className="font-extrabold sm:text-l text-[12px] uppercase pt-2 whitespace-nowrap">
                 {item.text}
               </h3>
             </div>
@@ -63,7 +66,7 @@ const Vision = () => {
       </div>
 
 
-      <div className="flex justify-center gap-8 my-40 w-11/12 mx-auto">
+      <div className="flex flex-wrap justify-center gap-8 my-40 w-11/12 mx-auto">
         {aboutdata.map((item, index) => (
           <div key={index} className="relative group">
             <div

@@ -12,12 +12,12 @@ const Page = () => {
     <div>
       <HeroSection />
       <AboutUs />
-      {/* <WhyUs />
+      <WhyUs />
       <Slider/>
-      <Chairmanmssg />
-      <OurServices />
+      {/* <Chairmanmssg /> */}
+      {/* <OurServices /> */}
       <Testimoinals />
-      <Contactus /> */}
+      <Contactus />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const OurTeam = () => {
       <h2 className="font-extrabold text-2xl uppercase w-fit mx-auto">
         Meet Our <span className="text-gradient">Team</span>
       </h2>
-      <div className="grid grid-cols-4 gap-10 my-6 group cursor-pointer">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 my-6 group cursor-pointer">
         {teamdata.map((item, index) => (
           <div
             key={index}
@@ -36,7 +36,9 @@ const OurTeam = () => {
             >
               <div className="grid place-items-center whitespace-nowrap py-2 ">
                 <h2 className="font-bold text-xl">{item.name}</h2>
-                <h3 className="font-semibold  text-sm italic tracking-wide">{item.role}</h3>
+                <h3 className="font-semibold  text-sm italic tracking-wide">
+                  {item.role}
+                </h3>
               </div>
             </div>
 
@@ -63,34 +65,34 @@ const OurTeam = () => {
 export default OurTeam;
 
 const teamdata = [
-    {
-      name: "Jane Doe",
-      img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
-    },
-    {
-      name: "Alander Doe",
-      img: "/team/team1.jpg",
-      role: "Chief Marketting Officer",
-    },
-    {
-      name: "Rajesh Hamal",
-      img: "/team/team1.jpg",
-      role: "Chief Technical Officer",
-    },
-    {
-      name: "Jane Doe",
-      img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
-    },
-    {
-      name: "Jane Doe",
-      img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
-    },
-    {
-      name: "Jane Doe",
-      img: "/team/team1.jpg",
-      role: "Chief Executive Officer",
-    },
-  ];
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+  {
+    name: "Alander Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Marketting Officer",
+  },
+  {
+    name: "Rajesh Hamal",
+    img: "/team/team1.jpg",
+    role: "Chief Technical Officer",
+  },
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+];

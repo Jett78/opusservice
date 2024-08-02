@@ -1,50 +1,27 @@
-import React from 'react'
-import Contactus from '../Home/Contactus'
+import React from "react";
+import Contactus from "../Home/Contactus";
 import { IoLocation } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 
 const page = () => {
   return (
-    <div className='bg-gray-200  pt-28'>
-        {/* <h2 className="text-gradient uppercase font-extrabold text-3xl w-fit mx-auto  ">
-              Contact Us
-            </h2> */}
-            <Contactus/>
+    <div className="bg-gray-200 pt-0">
+      <div className="mx-auto flex justify-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10433.380097085568!2d85.32065640507321!3d27.675237067138614!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19eb1dad6439%3A0xbb1689fdcee3740b!2sLabim%20Mall!5e0!3m2!1sen!2snp!4v1722408798182!5m2!1sen!2snp"
+          width="1520"
+          height="550"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          className="rounded-none"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <Contactus />
+    </div>
+  );
+};
 
-            <div className='flex justify-center gap-60 mt-10 py-8  bg-gray-200'>
-              {locationinfo.map((item,index) => (
-                <div key={index} className='grid place-items-center'>
-                  <figure className='text-3xl text-tertiary'>
-                    {item.img}
-                  </figure>
-                  <div className='grid place-items-center'>
-                    {/* <h2 className='font-bold text-xl'>{item.title}</h2> */}
-                    <h3 className='font-bold text-2xl font-sans'>{item.desc}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-         </div>
-  )
-}
-
-export default page
-
-const locationinfo = [
-  {
-    img: <IoLocation />,
-    title: "Address",
-    desc: "Samakhusi-11",
-  },
-  {
-    img: <MdEmail />,
-    title: "Email",
-    desc: "opus211@gmail.com",
-  },
-  {
-    img: <IoCall />,
-    title: "Contact",
-    desc: "+977-9856589654",
-  },
-];
+export default page;

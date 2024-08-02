@@ -10,7 +10,7 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 const Chairmanmssg: React.FC = () => {
-  const messageConatiner = useRef();
+  const messageConatiner = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const mssgSplit = new SplitType(".mssgdescanimate");
@@ -62,15 +62,15 @@ const Chairmanmssg: React.FC = () => {
   });
 
   return (
-    <main className="w-11/12 mx-auto my-40" ref={messageConatiner}>
+    <main className="w-11/12 mx-auto sm:my-40 my-40" ref={messageConatiner}>
       <div className="mx-auto rounded-lg ">
-        <div className="flex flex-row-reverse items-center justify-center gap-10 ">
-          <section className="relative  w-[40%] h-[35em]   px-6 py-10">
+        <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 ">
+          <section className="relative  sm:w-[40%] w-full  h-[35em]   px-6 py-10">
             <div className=" pb-10">
               <h2 className="mssganimate text-gradient text-2xl font-bold">
                 Chairmans Message
               </h2>
-              <h3 className="mssganimate text-4xl font-bold">
+              <h3 className="mssganimate md:text-4xl text-2xl font-bold">
                 Honest Services for Sustained Results
               </h3>
             </div>
@@ -119,11 +119,11 @@ const Chairmanmssg: React.FC = () => {
               <ImQuotesRight />
             </div>
           </section>
-          <section className="w-[40%] relative ">
+          <section className="sm:w-[40%] relative sm:top-0 top-20">
             <img
               src="./chairman.jpg"
               alt="chairman"
-              className="rounded-lg w-[59em] h-[34em] object-cover brightness-75"
+              className="rounded-lg sm:w-[59em] sm:h-[34em] h-[25em] object-cover brightness-75"
             />
             <svg
               className="whitebox h-[42em]"

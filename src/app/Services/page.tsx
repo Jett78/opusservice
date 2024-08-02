@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
@@ -7,31 +7,30 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const page = () => {
-  const cardsRef = useRef([]);
-  
-useGSAP(() => {
-  gsap.to(cardsRef.current, {
-    stagger: 2,
-    scrollTrigger: {
-      trigger: cardsRef.current,
-      start: "top center",
-      end: "bottom center",
-      scrub: true,
-    },
+const Page: React.FC = () => {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(() => {
+    gsap.to(cardsRef.current, {
+      stagger: 2,
+      scrollTrigger: {
+        trigger: cardsRef.current,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
   });
-})
   return (
-    <div className="w-11/12 mx-auto pt-28">
-      <h2 className="font-extrabold text-2xl uppercase text-gradient w-fit mx-auto">
+    <div className="w-11/12 mx-auto pt-10">
+      <h2 className="font-extrabold text-3xl uppercase text-gradient w-fit mx-auto">
         Our Services
       </h2>
       <p className=" font-medium text-md w-[60em] mx-auto py-2 text-center">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
         eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam
-        eos. 
+        eos.
       </p>
-
 
       <div className="my-4 space-y-10">
         {servicesdata.map((item, index) => (
@@ -63,8 +62,7 @@ useGSAP(() => {
   );
 };
 
-export default page;
-
+export default Page;
 
 const servicesdata = [
   {

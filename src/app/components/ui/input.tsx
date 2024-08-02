@@ -51,6 +51,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           )}
           ref={ref}
           {...props}
+          required
         />
       </motion.div>
     );

@@ -17,7 +17,38 @@ const TrustComponent = () => {
     autoplaySpeed: 2000,
     cssEase: "linear",
     pauseOnHover: false, // Continue sliding when hovered
+     
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          pauseOnHover: false, // Continue sliding when hovered
 
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      }
+    ]
   };
   const settings2 = {
     dots: false,
@@ -31,13 +62,44 @@ const TrustComponent = () => {
     cssEase: "linear",
     rtl: true,// Add this line to change the slide direction
     pauseOnHover: false, // Continue sliding when hovered
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          pauseOnHover: false, // Continue sliding when hovered
+
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      }
+    ]
 
 
   };
   return (
     <main className="my-28">
-      <h2 className="font-bold text-2xl w-fit mx-auto uppercase">
-        <span className="text-gradient font-extrabold">Trusted </span>by 1000+
+      <h2 className="font-bold sm:text-2xl text-xl w-fit mx-auto uppercase text-center">
+        <span className="text-gradient font-extrabold ">Trusted </span>by 1000+
         Companies
       </h2>
 
