@@ -22,7 +22,7 @@ const Testimoinals:React.FC = () => {
     
   };
   return (
-    <main className=" my-20 ">
+    <main className=" md:my-20 my-6 ">
       <div className="rounded-lg sm:py-20 py-4 bg-[url('/globe.jpeg')] bg-center bg-white bg-blend-lighten bg-opacity-50">
         <h2 className="text-center font-extrabold sm:text-l text-sm uppercase tracking-wider">
           Testimonials
@@ -47,7 +47,7 @@ const Testimoinals:React.FC = () => {
             ))}
           </Slider>
 
-          <div className="absolute sm:text-6xl text-2xl sm:bottom-[3em] top-0 opacity-50 text-tertiary">
+          <div className="absolute sm:text-6xl text-2xl sm:bottom-[3em] bottom-[12em]  opacity-50 text-tertiary">
             <ImQuotesLeft />
           </div>
           <div className="absolute sm:text-6xl text-2xl sm:bottom-16 bottom-28 right-0 opacity-50 text-tertiary">
@@ -64,22 +64,22 @@ export default Testimoinals;
 const testimonialsdata:Testimonial[] = [
   {
     name: "John Doe",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates itaque possimus quae cumque dicta deserunt commodi facere libero at reiciendis ab amet distinctio voluptatibus corrupti quo, esse rerum debitis?",
+    desc: "Working with [Company Name] has been a game-changer for our recruitment process. Their team is highly professional and understands our specific needs. They consistently provide us with top-notch candidates who fit perfectly with our company culture.",
     img: "/avatar.jpg",
   },
   {
     name: "Jane Doe",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates itaque possimus quae cumque dicta deserunt commodi facere libero at reiciendis ab amet distinctio voluptatibus corrupti quo, esse rerum debitis?",
+    desc: "The level of service and support we receive from [Company Name] is exceptional. They are always responsive and go above and beyond to ensure our staffing requirements are met. Their expertise in the industry is evident, and they have become a trusted partner in our growth",
     img: "/avatar.jpg",
   },
   {
     name: "Alexander Muffins",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates itaque possimus quae cumque dicta deserunt commodi facere libero at reiciendis ab amet distinctio voluptatibus corrupti quo, esse rerum debitis?",
+    desc: "We have been collaborating with [Company Name] for several years now, and they have been instrumental in helping us find the right talent for our organization. Their commitment to quality and their deep understanding of our industry needs have made a significant impact on our operations.",
     img: "/avatar.jpg",
   },
   {
     name: "Kiran Nepali",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates itaque possimus quae cumque dicta deserunt commodi facere libero at reiciendis ab amet distinctio voluptatibus corrupti quo, esse rerum debitis?",
+    desc: "The team at [Company Name] has been a pleasure to work with. Their recruitment process is efficient, and they always deliver candidates who are well-suited for the roles. Their dedication to customer satisfaction is truly commendable",
     img: "/avatar.jpg",
   },
 ];

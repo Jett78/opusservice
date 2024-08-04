@@ -52,7 +52,6 @@ const Chairmanmssg: React.FC = () => {
     tl.from(
       mssgSplit.chars,
       {
-        y: 20,
         duration: 2,
         opacity: 0,
         stagger: 0.2,
@@ -62,10 +61,10 @@ const Chairmanmssg: React.FC = () => {
   });
 
   return (
-    <main className="w-11/12 mx-auto sm:my-40 my-40" ref={messageConatiner}>
+    <main className="w-11/12 mx-auto md:my-40 my-10" ref={messageConatiner}>
       <div className="mx-auto rounded-lg ">
         <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 ">
-          <section className="relative  sm:w-[40%] w-full  h-[35em]   px-6 py-10">
+          <section className="relative  lg:w-[40%]   h-[35em]  py-10">
             <div className=" pb-10">
               <h2 className="mssganimate text-gradient text-2xl font-bold">
                 Chairmans Message
@@ -75,18 +74,19 @@ const Chairmanmssg: React.FC = () => {
               </h3>
             </div>
             <p className="mssgdescanimate font-medium text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              adipisci velit ratione similique, pariatur libero sit? Animi
-              consequuntur totam fugiat, incidunt corporis ut distinctio
-              corrupti, qui velit iure delectus omnis? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Quos adipisci velit ratione
-              similique, pariatur libero sit? Animi consequuntur totam fugiat,
-              incidunt corporis ut distinctio corrupti, qui velit iure delectus
-              omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quos adipisci velit ratione similique, pariatur libero sit? Animi
-              consequuntur totam fugiat, incidunt corporis ut distinctio
-              corrupti, qui velit iure delectus omnis? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Quos adipisci velit ratione
+              It is with great pride and gratitude that I welcome you to our
+              company, a leading provider of comprehensive manpower solutions.
+              At the heart of our operations lies a commitment to excellence,
+              innovation, and integrity. We understand the vital role that human
+              capital plays in the success of any organization, and we are
+              dedicated to delivering the highest quality of service to meet
+              your workforce needs.In todays dynamic and fast-paced business
+              environment, finding the right talent and maintaining a skilled
+              workforce is more critical than ever. Our mission is to empower
+              your business by providing customized recruitment, training, and
+              support services that align with your strategic goals. We strive
+              to build lasting relationships based on trust, reliability, and
+              mutual respect.
             </p>
             <h3 className="text-xl font-bold mt-6">Alaxander Doe</h3>
             <p className="text-[12px] font-semibold">Chairman</p>
@@ -112,18 +112,21 @@ const Chairmanmssg: React.FC = () => {
               />
             </div>
 
-            <div className="absolute text-6xl top-36 opacity-5">
+            {/* <div className="absolute text-6xl top-36 opacity-5">
               <ImQuotesLeft />
             </div>
             <div className="absolute text-6xl bottom-28 right-10 opacity-5">
               <ImQuotesRight />
-            </div>
+            </div> */}
           </section>
-          <section className="sm:w-[40%] relative sm:top-0 top-20">
-            <img
-              src="./chairman.jpg"
+
+          <section className="lg:w-[40%] relative  sm:top-0 top-20">
+            <Image
+              src="/chairman.jpg"
+              height={1000}
+              width={1000}
               alt="chairman"
-              className="rounded-lg sm:w-[59em] sm:h-[34em] h-[25em] object-cover brightness-75"
+              className="rounded-lg sm:w-[59em] sm:max-h-[34em] max-h-[25em] object-cover brightness-75"
             />
             <svg
               className="whitebox h-[42em]"

@@ -11,7 +11,7 @@ export function Form() {
   };
 
   return (
-    <div className=" mx-auto  md:rounded-2xl p-8 my-8 ">
+    <div className=" mx-auto  md:rounded-2xl  my-8 ">
       <h2 className=" font-bold sm:text-5xl text-3xl text-black   ">
       Reach out to us
       </h2>
@@ -43,9 +43,15 @@ export function Form() {
             className="cols={32} !rows={32}  "
           />
         </LabelInputContainer>
-        <button type="submit" className=" w-[140px] bg-black font-bold h-[45px] my-3 flex items-center justify-center rounded-full cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#CC1587] before:via-[#26538C] before:to-[#00AFF0] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+        {/* <button type="submit" className=" w-[140px] bg-black font-bold h-[45px] my-3 flex items-center justify-center rounded-full cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#CC1587] before:via-[#26538C] before:to-[#00AFF0] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
             Send Message
-          </button>      </form>
+          </button>     */}
+
+          <button className="button-gradient">
+            Send Message
+          </button>
+          
+            </form>
     </div>
   );
 }

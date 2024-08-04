@@ -13,30 +13,30 @@ const HeroSection: React.FC = () => {
 
   useGSAP(() => {
     //img-reveal animation
-    gsap.fromTo(
-      maincontainer.current,
-      {
-        clipPath: "inset(0 0 100% 0)",
-        opacity: 1,
-      },
-      {
-        clipPath: "inset(0 0 0% 0)",
-        opacity: 1,
-        duration: 2,
-      }
-    );
+    // gsap.fromTo(
+    //   maincontainer.current,
+    //   {
+    //     clipPath: "inset(0 0 100% 0)",
+    //     opacity: 1,
+    //   },
+    //   {
+    //     clipPath: "inset(0 0 0% 0)",
+    //     opacity: 1,
+    //     duration: 2,
+    //   }
+    // );
 
-    gsap.to(heroimg.current, {
-      scale: 1.5,
-      scrollTrigger: {
-        trigger: heroimg.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        // markers: true,
-        pin: true,
-      },
-    });
+    // gsap.to(heroimg.current, {
+    //   scale: 1.5,
+    //   scrollTrigger: {
+    //     trigger: heroimg.current,
+    //     start: "top top",
+    //     end: "bottom top",
+    //     scrub: 1,
+    //     // markers: true,
+    //     pin: true,
+    //   },
+    // });
 
     // gsap.to(heroimg.current, {
     //     scale: 1.1,
@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <main
-      className="relative w-full sm:h-screen h-[90vh]  z-0 overflow-hidden"
+      className="relative w-full h-[92vh]  z-0 overflow-hidden"
       ref={maincontainer}
     >
       <Image
@@ -61,8 +61,8 @@ const HeroSection: React.FC = () => {
         className="h-screen object-cover w-full absolute inset-0 brightness-50 overflow-hidden "
       />
 
-      <div className="absolute sm:top-[25em] top-[20em] -translate-y-1/2 left-1/2 -translate-x-1/2 text-white ">
-        <h2 className="font-bold lg:text-[64px] md:text-[50px] sm:text-4xl text-4xl text-center  sm:leading-[65px] whitespace-normal sm:whitespace-nowrap">
+      <div className="absolute sm:top-1/2 top-[20em] -translate-y-1/2 left-1/2 -translate-x-1/2 text-white ">
+        <h2 className="font-bold lg:text-[70px] md:text-[50px] sm:text-4xl text-4xl text-center  sm:leading-[65px] whitespace-normal sm:whitespace-nowrap">
           Elevate Your Workforce With Us
         </h2>
         <p className="font-medium text-[18px] text-white sm:py-4 py-8 text-center max-w-[50em] min-w-[20em] leading-6 mx-auto">
@@ -72,9 +72,9 @@ const HeroSection: React.FC = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center mt-6 group">
-          <Link href="/Career">
-            <button className="button-gradient group-hover:bg-gradient-to-r ">
-              Apply for Job
+          <Link href="/Contact">
+            <button className="button-gradient ">
+              Join with Us
             </button>
           </Link>
 
@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
           </button> */}
 
          <Link  href="https://wa.me/1234567890">
-         <button className="px-6 py-2 border rounded-full text-green-600 bg-white font-bold flex items-center gap-2 border-green-600">
+         <button className="px-6 py-3 border rounded-full text-green-600 bg-white font-bold flex items-center gap-2 border-green-600">
             <Image src="/whatsappicon.png" alt="whatsapp-icon" width={10000} height={1000} className="w-6" />
             <span>Whatsapp Now</span>
           </button>

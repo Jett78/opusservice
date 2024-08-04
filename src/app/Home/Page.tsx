@@ -7,6 +7,7 @@ import OurServices from "./OurServices";
 import Testimoinals from "./Testimoinals";
 import Contactus from "./Contactus";
 import Slider from "./Slides";
+import Cta from "./Cta";
 const Page = () => {
   return (
     <div>
@@ -14,9 +15,10 @@ const Page = () => {
       <AboutUs />
       <WhyUs />
       <Slider/>
-      {/* <Chairmanmssg /> */}
-      {/* <OurServices /> */}
+      <Chairmanmssg />
+      <OurServices />
       <Testimoinals />
+      <Cta/>
       <Contactus />
     </div>
   );

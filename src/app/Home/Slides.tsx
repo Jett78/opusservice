@@ -18,14 +18,45 @@ const Slides = () => {
     cssEase: "linear",
     rtl: true,// Add this line to change the slide direction
     pauseOnHover: false, // Continue sliding when hovered
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          pauseOnHover: false, // Continue sliding when hovered
+
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          pauseOnHover: false,
+        }
+      }
+    ]
 
   };
 
   return (
-    <main className="my-28 max-w-screen">
+    <main className="md:my-28 my-6 max-w-screen bg-gray-50 py-12">
       <div className=" mt-10 relative">
-        <div className="absolute left-0 top-0 w-[15rem] z-30 bg-gradient-to-r from-white via-white  to-transparent h-full"></div>
-        <div className="absolute right-0 top-0 w-[15rem] z-30 bg-gradient-to-l from-white via-white  to-transparent h-full"></div>
+        {/* <div className="absolute left-0 top-0 w-[15rem] z-30 bg-gradient-to-r from-white via-white  to-transparent h-full"></div> */}
+        {/* <div className="absolute right-0 top-0 w-[15rem] z-30 bg-gradient-to-l from-white via-white  to-transparent h-full"></div> */}
 
       <Slider {...settings}>
         {companies.map((item,index) => (
