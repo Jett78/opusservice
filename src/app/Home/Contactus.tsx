@@ -29,45 +29,52 @@ const locationinfo = [
 
 const Contactus = () => {
   return (
-    <main className=" mt-10 bg-gray-100 py-8">
+    <main className=" bg-gray-50 py-20">
       <div className="w-11/12 mx-auto flex flex-wrap gap-8 justify-between  rounded-2xl">
-        <section className="sm:w-[30%]">
-        
-          <div className="sticky top-[10rem] left-0">
+        <section className="sm:w-[35%]">
+          <div className="sticky top-[4rem] left-0">
             <h1 className="header md:text-5xl text-3xl font-bold leading-[1.1em] whitespace-nowrap">
               Get in
               <span className="text-gradient"> Touch</span>
             </h1>
             <p className="font-medium text-sm py-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing e ut? Inventore
-              blanditiis commodi dignissimos nisi optio in animi voluptas quos
-              ab!
+              we value your inquiries and are here to assist you with any
+              questions or concerns.Whether you are looking for more information
+              about our services, need support, or want to explore partnership
+              opportunities, our team is ready to help.
             </p>
             <div className="flex gap-4">
-          <Image
-            src="/icons/facebookicon.png"
-            width={30}
-            height={30}
-            alt="icon"
-          />
-          <Image src="/icons/instaicon.png" width={30} height={30} alt="icon" />
-          <Image
-            src="/icons/whatsappicon.png"
-            width={30}
-            height={30}
-            alt="icon"
-          />
-        </div>
+              <Image
+                src="/icons/facebookicon.png"
+                width={30}
+                height={30}
+                alt="icon"
+              />
+              <Image
+                src="/icons/instaicon.png"
+                width={30}
+                height={30}
+                alt="icon"
+              />
+              <Image
+                src="/icons/whatsappicon.png"
+                width={30}
+                height={30}
+                alt="icon"
+              />
+            </div>
           </div>
         </section>
-        <section className="sm:w-[55%]">
-          <div className="grid grid-cols-2 gap-6">
+        <section className="md:w-[55%]">
+          <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1  grid-cols-2 gap-y-2 gap-x-2">
             {locationinfo.map((item, index) => (
               <div
                 key={index}
-                className="border shadow-md bg-white sm:w-[22em] w-[9em] sm:h-40 rounded-xl p-8 flex flex-col gap-2 items-center justify-center"
+                className="border shadow-md hover:shadow-lg duration-300 ease-in-out bg-white w-full sm:h-40 rounded-xl p-8 flex flex-col gap-2 items-center justify-center cursor-pointer "
               >
-                <div className="sm:text-3xl text-xl text-center animate-bounce">{item.img}</div>
+                <div className="sm:text-3xl text-xl text-center animate-bounce text-tertiary">
+                  {item.img}
+                </div>
                 <div>
                   {/* <h2 className="font-bold text-xl">{item.title}</h2> */}
                   <h3 className="font-bold sm:text-2xl text-[12px] font-sans whitespace-nowrap">

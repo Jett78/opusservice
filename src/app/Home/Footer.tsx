@@ -22,7 +22,7 @@ const navdata = [
   },
   {
     title: "Blog",
-    path: "/Blog",
+    path: "/blog",
   },
   {
     title: "Contact us",
@@ -32,44 +32,55 @@ const navdata = [
 
 const anotherlink = [
   {
-    title:"Outscourcing",
-    path:"/"
+    title: "Oil & Gases",
+    path: "/",
   },
   {
-    title:"OutStaffing",
-    path:"/"
+    title: "Industrial Services",
+    path: "/",
   },
   {
-    title:"Business Assistance",
-    path:"/"
+    title: "Health Services",
+    path: "/",
   },
   {
-    title:"Marketting",
-    path:"/"
+    title: "Construction Services",
+    path: "/",
   },
-]
+  {
+    title: "Information technology",
+    path: "/",
+  },
+  {
+    title: "Accomodation & Transportation",
+    path: "/",
+  },
+  {
+    title: "Blue Collar & White Collar",
+    path: "/",
+  },
+];
 
-const Footer:React.FC = () => {
+const Footer: React.FC = () => {
   return (
-   <main className="bg-black text-white">
-      <footer className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:gap-0 gap-10 py-14 sm:px-28 px-4 border-b border-gray-600">
-      <section className="space-y-4 grid place-items-center relative">
-        <figure className="absolute   sm:-top-10 -top-20 -left-6">
-        <Image
+    <main className="bg-[#224a7f] text-white">
+      <footer className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-6 gap-10 py-14 lg:px-28 md:px-14 px-4 border-b border-gray-100">
+        <section className="md:space-y-0 space-y-4 grid place-items-center relative">
+          <figure className="absolute lg:-top-10 md:-top-10 sm:-top-24 -top-20 -left-6">
+            <Image
               src="/opusLogo.png"
               alt="logo"
               height={1000}
               width={1000}
               className="w-36 h-36"
             />{" "}
-        </figure>
-        <p className="text-sm font-medium text-lighttext">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-          eveniet quas error quam quasi nesciunt recusandae autem corporis ut
-          eos ratione, aspernatur et saepe vitae laudantium eius aliquid eum?
-          Doloribus?
-        </p>
-        {/* <div className="flex gap-4">
+          </figure>
+          <p className="text-sm font-medium text-gray-300">
+            At OPus, we specialize in providing comprehensive manpower solutions
+            tailored to meet the unique needs of our clients across diverse
+            industries
+          </p>
+          {/* <div className="flex gap-4">
           <Image
             src="/icons/facebookicon.png"
             width={30}
@@ -84,58 +95,65 @@ const Footer:React.FC = () => {
             alt="icon"
           />
         </div> */}
-      </section>
+        </section>
 
-     <div className="col-span-2 flex sm:justify-center justify-between sm:gap-40">
-     <section className="grid sm:items-center sm:place-items-center place-items-start text-center">
-        <h2 className="font-semibold text-lg">Quick Links</h2>
-        <ul className="space-y-2 mt-4 text-lighttext  font-medium">
-          {navdata.map((item,index) => (
-            <div key={index} className="hover:text-white">
-                 <Link href={item.path}>{item.title}</Link>     
-            </div>
-          ))}
-        </ul>
-      </section>
+        <section className="grid sm:items-center xl:place-items-center md:place-items-end place-items-start ">
+          <h2 className="font-semibold text-lg">Quick Links</h2>
+          <ul className="space-y-2 mt-4 text-gray-300 text-sm  font-medium">
+            {navdata.map((item, index) => (
+              <div key={index} className="hover:text-white">
+                <Link href={item.path}>{item.title}</Link>
+              </div>
+            ))}
+          </ul>
+        </section>
 
-      <section className="flex flex-col sm:items-center items-start">
-        <h2 className="font-semibold text-lg">Our Services</h2>
-        <ul className="space-y-2 mt-4 text-center text-lighttext font-medium">
-         {anotherlink.map((item,index) => (
-          <div key={index} className="hover:text-white">
-            <Link href={item.path}>{item.title}</Link>
+        <section className="grid sm:items-center xl:place-items-center md:place-items-start place-items-start ">
+          <h2 className="font-semibold text-lg">Our Services</h2>
+          <ul className="space-y-2 mt-4 text-gray-300 text-sm  font-medium">
+            {anotherlink.map((item, index) => (
+              <div key={index} className="hover:text-white">
+                <Link href={item.path}>{item.title}</Link>
+              </div>
+            ))}
+          </ul>
+        </section>
+
+        <section className="space-y-4 flex flex-col sm:items-end ">
+          <h2 className="font-semibold text-lg ">Get Latest Updates</h2>
+          <p className="sm:text-end font-medium text-sm text-gray-300">
+            Subscribe to our newsletter and follow us on social media to receive
+            timely information.
+          </p>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              className="pl-4 p-2 bg-white outline-none rounded-tl-xl rounded-bl-xl text-black"
+            />
+            <button className="bg-gradient-to-r from-[#CC1587] via-[#26538C] to-[#00AFF0] hover:bg-gradient-to-r hover:from-[#00AFF0] hover:via-[#26538C] hover:to-[#CC1587] duration-750 ease-in-out p-2 px-4 font-medium rounded-tr-xl rounded-br-xl">
+              Subscribe
+            </button>
           </div>
-         ))}
-        </ul>
-      </section>
+        </section>
+      </footer>
 
-     </div>
-      <section className="space-y-4 flex flex-col sm:items-end">
-        <h2 className="font-semibold text-lg ">Get Latest Updates</h2>
-        <p className="sm:text-end font-medium text-lighttext">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-          quis!
-        </p>
-        <div className="flex">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="p-2 bg-white outline-none rounded-tl-xl rounded-bl-xl text-black"
-            
-          />
-          <button className="bg-secondary p-2 font-semibold rounded-tr-xl rounded-br-xl">
-            Subscribe
-          </button>
+      <div className="flex flex-wrap whitespace-nowrap md:justify-between justify-center md:px-20 px-4">
+      <div className="py-4 flex items-center gap-1 justify-center">
+          <FaCopyright />
+          <h2 className="text-white tracking-wider text-sm">
+            2024 <span>|| All Rights Reserved</span>
+          </h2>
         </div>
-      </section>
-    </footer>
 
-    <div className="py-4 flex items-center gap-1 justify-center">
-    <FaCopyright />
-
-      <h2 className="text-white tracking-wider text-sm">Designed and Developed by <span className=" font-bold">WebX</span></h2>
-    </div>
-   </main>
+        <div className="py-4 flex items-center gap-1 justify-center">
+          <FaCopyright />
+          <h2 className="text-white tracking-wider text-sm">
+            Designed and Developed by <span className=" font-bold">WebX</span>
+          </h2>
+        </div>
+      </div>
+    </main>
   );
 };
 
