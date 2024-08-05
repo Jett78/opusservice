@@ -68,7 +68,7 @@ const Page: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto my-10">
         {currentItems.map((item, index) => (
-          <Link key={index} href={`/Blog/${index}`}>
+          <Link key={index} href={`/pages/Blog/${index}`}>
             <div
               key={index}
               className="p-4 hover:bg-gray-100 flex flex-col justify-center items-center hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg"

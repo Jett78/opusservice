@@ -15,23 +15,23 @@ const navdata = [
   },
   {
     title: "About",
-    path: "/About",
+    path: "/pages/About",
   },
   {
     title: "Services",
-    path: "/Services",
+    path: "/pages/Services",
   },
   {
     title: "Career",
-    path: "/Career",
+    path: "/pages/Career",
   },
   {
     title: "Blog",
-    path: "/Blog",
+    path: "/pages/Blog",
   },
   {
     title: "Contact us",
-    path: "/Contact",
+    path: "/pages/Contact",
   },
 ];
 

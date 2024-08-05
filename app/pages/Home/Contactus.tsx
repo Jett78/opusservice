@@ -2,7 +2,7 @@ import React from "react";
 import { IoLocation } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
-import { Form } from "../../src/components/Form";
+import { Form } from "../../../src/components/Form";
 import Image from "next/image";
 const locationinfo = [
   {

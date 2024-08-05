@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../src/components/Navbar";
-import Footer from "./Home/Footer";
+import Footer from "./pages/Home/Footer";
 import Lenis from 'lenis';
 import Headroom from 'react-headroom';
 import MobileButtons from '../src/components/MobileButtons';
