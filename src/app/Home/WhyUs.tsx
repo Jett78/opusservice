@@ -79,9 +79,9 @@ const WhyUs = () => {
     );
   });
   return (
-    <main className=" my-20" ref={whycontainerRef}>
-      <div className="flex flex-wrap justify-between  w-11/12 mx-auto ">
-        <section className="sm:max-w-[50%]">
+    <main className=" my-20 overflow-hidden w-full" ref={whycontainerRef}>
+      <div className="flex flex-wrap justify-center lg:gap-0  w-11/12 mx-auto ">
+        <section className="lg:max-w-[50%]">
           <div className="">
             <div className="h-[24px] overflow-hidden mb-6">
               <h2 className="headanimate text-gradient uppercase font-bold text-xl border-b w-fit ">
@@ -91,7 +91,7 @@ const WhyUs = () => {
             <h1 className="headanimate lg:text-5xl md:text-3xl text-3xl  font-bold leading-[1.1em]">
               Right Connection and Right Employee
             </h1>
-            <p className="headanimate font-medium text-lighttext my-6 max-w-[30em] md:text-xl min-w-[20em]">
+            <p className="headanimate font-medium text-lighttext my-6 max-w-[30em] md:text-xl text-sm min-w-[20em]">
               In the pursuit of business success, two critical factors often
               determine the trajectory of an organization: establishing the
               right connections and hiring the right employees. Both elements
@@ -99,7 +99,7 @@ const WhyUs = () => {
               achieving long-term success. Here’s how focusing on these aspects
               can significantly impact your business:
             </p>
-            <Link href="/Services">
+            <Link href="/Services" className="md:block hidden">
               <button className=" animate-button">
                 Know More
               </button>
@@ -124,7 +124,7 @@ const WhyUs = () => {
                   {item.desc}
                 </p>
                 {/* Background gradient for small screens */}
-                <div className="sm:hidden z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full h-full right-0 rounded-lg bottom-0" />
+                <div className="md:hidden z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full h-full right-0 rounded-lg bottom-0" />
                 {/* Background gradient on hover for large screens */}
                 <div className="hidden sm:block z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full right-0 group-hover:h-full rounded-lg bottom-0 duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left" />
               </div>
@@ -147,12 +147,18 @@ const WhyUs = () => {
                   {item.desc}
                 </p>
                 {/* Background gradient for small screens */}
-                <div className="sm:hidden z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full h-full right-0 rounded-lg bottom-0" />
+                <div className="md:hidden z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full h-full right-0 rounded-lg bottom-0" />
                 {/* Background gradient on hover for large screens */}
                 <div className="hidden sm:block z-0 absolute bg-gradient-to-tr from-primary via-secondary to-tertiary w-full right-0 group-hover:h-full rounded-lg bottom-0 duration-500 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left" />
               </div>
             ))}
           </div>
+
+          <Link href="/Services" className="md:hidden block">
+              <button className=" animate-button !my-6">
+                Know More
+              </button>
+            </Link>
         </section>
       </div>
 

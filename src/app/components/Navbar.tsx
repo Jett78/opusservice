@@ -61,9 +61,9 @@ const Navbar = () => {
 
   return (
     <Headroom>
-      <div className="overflow-hidden w-full">
+      <div className="overflow-hidden w-full z-100">
         <main
-          className={`relative overflow-hidden bg-[#224a7f] bg-opacity-90 bg-blend-overlay bg-clip-padding backdrop-filter backdrop-blur-xl  text-white flex justify-end  top-0 left-0 w-full items-center py-6 md:px-20 px-6 z-50`}
+          className={`relative overflow-hidden bg-[#224a7f] bg-opacity-90 bg-blend-overlay bg-clip-padding backdrop-filter backdrop-blur-xl  text-white flex justify-end  top-0 left-0 w-full items-center py-6 lg:px-20 md:px-10 px-6 z-50`}
         >
           <figure className="absolute sm:left-10 left-2">
             <Image
@@ -100,7 +100,7 @@ const Navbar = () => {
           <div
             className={`${
               isMenuOpen ? "translate-x-0" : "translate-x-full hidden"
-            } ease-in-out duration-300 absolute bg-black w-full h-screen top-0 pt-10 inset-0 overflow-x-hidden`}
+            } ease-in-out duration-300 absolute bg-[#224a7f] w-full h-screen top-0 pt-10 inset-0 overflow-x-hidden`}
           >
             <div className="grid place-items-center justify-center gap-8 pt-28">
               {navdata.map((items, index) => (
@@ -108,7 +108,7 @@ const Navbar = () => {
                   <Link
                     href={items.path}
                     className={`font-semibold text-white text-3xl ${
-                      router === items.path ? "text-tertiary font-bold" : ""
+                      router === items.path ? "text-[#00AFF0] font-bold" : "text-white"
                     }`}
                   >
                     {items.title}

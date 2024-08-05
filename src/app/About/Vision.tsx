@@ -2,21 +2,23 @@ import React from "react";
 import { TbDeviceVisionPro } from "react-icons/tb";
 import { GoGoal } from "react-icons/go";
 import Image from "next/image";
+import CountUp from 'react-countup'
+import { useInView } from 'react-intersection-observer';
 
 const Vision = () => {
   return (
     <main className="">
-      <h2 className="text-gradient uppercase font-extrabold text-3xl w-fit mx-auto mb-10 ">
+      <h2 className="text-gradient uppercase font-extrabold text-3xl w-fit mx-auto md:mb-10 ">
         About Us
       </h2>
-      <section className="w-11/12 mx-auto flex flex-wrap flex-row-reverse justify-between items-start">
-        <div className="sm:w-[50%]">
+      <section className="w-11/12 mx-auto flex flex-wrap flex-row-reverse justify-center gap-8 items-start">
+        <div className="md:w-[50%]">
           <div className="h-[24px] overflow-hidden mb-2"></div>
-          <h1 className="header sm:text-5xl text-2xl font-bold leading-[1.1em]">
+          <h1 className="header lg:text-5xl md:text-4xl sm:text-3xl  text-2xl font-bold leading-[1.1em]">
             Outsourcing and outstaffing solutions for sustainable
             <span className="text-gradient"> Business Growth.</span>
           </h1>
-          <p className="about-desc font-medium text-lighttext my-6">
+          <p className="about-desc font-medium xl:text-xl md:text-l text-sm text-lighttext my-6">
             In today’s rapidly evolving business landscape, companies are
             increasingly turning to outsourcing and outstaffing as strategic
             solutions to drive growth, optimize operations, and maintain a
@@ -51,7 +53,7 @@ const Vision = () => {
         <div className="text-white grid sm:grid-cols-4 grid-cols-2 items-center justify-center gap-x-4 gap-y-14 py-16">
           {details.map((item, index) => (
             <div key={index} className="grid place-items-center">
-              <h2 className="font-extrabold sm:text-6xl text-3xl">
+              <h2 className="font-extrabold lg:text-6xl md:text-4xl text-3xl">
                 {item.num}
               </h2>
               <h3 className="font-extrabold sm:text-l text-[12px] uppercase pt-2 whitespace-nowrap">
@@ -62,18 +64,18 @@ const Vision = () => {
         </div>
       </div>
 
-      <div className=" py-40  bg-gray-50">
-        <div className="w-11/12 mx-auto flex flex-wrap justify-center gap-8">
+      <div className=" md:py-40 py-20  bg-gray-50">
+        <div className="w-11/12 mx-auto flex flex-wrap justify-center md:gap-8 gap-12">
         {aboutdata.map((item, index) => (
           <div key={index} className="relative group">
             <div
-              className="rounded-2xl w-[22em] h-[20em] p-4 relative "
+              className="rounded-2xl max-w-[22em] h-[20em] p-4 relative "
               style={{ border: `2px solid ${item.border}` }}
             >
               <div className="h-20 w-20 flex items-center justify-center rounded-full gradient mb-6 absolute -top-10 left-1/2 -translate-x-1/2 z-10">
                 <div className="text-white text-3xl ">{item.img}</div>
               </div>
-              <h2 className="font-bold text-3xl text-center mt-10  group-hover:text-white relative z-50">
+              <h2 className="font-bold text-3xl text-center mt-10  group-hover:text-white relative z-10">
                 {item.title}
               </h2>
               <p className="font-semibold text-black italic text-sm my-4 leading-6 group-hover:text-white relative z-50">

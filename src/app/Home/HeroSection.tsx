@@ -61,11 +61,11 @@ const HeroSection: React.FC = () => {
         className="h-screen object-cover w-full absolute inset-0 brightness-50 overflow-hidden "
       />
 
-      <div className="absolute sm:top-1/2 top-[20em] -translate-y-1/2 left-1/2 -translate-x-1/2 text-white ">
-        <h2 className="font-bold lg:text-[70px] md:text-[50px] sm:text-4xl text-4xl text-center  sm:leading-[65px] whitespace-normal sm:whitespace-nowrap">
+      <div className="absolute sm:top-1/2 top-[20em] -translate-y-1/2 left-1/2 -translate-x-1/2 text-white  w-11/12 mx-auto">
+        <h2 className="font-bold lg:text-[70px] md:text-[48px] sm:text-4xl text-4xl text-center  sm:leading-[65px] whitespace-normal sm:whitespace-nowrap">
           Elevate Your Workforce With Us
         </h2>
-        <p className="font-medium text-[18px] text-white sm:py-4 py-8 text-center max-w-[50em] min-w-[20em] leading-6 mx-auto">
+        <p className="font-medium text-[18px] text-white sm:py-4 py-8 text-center max-w-[48em] min-w-[15em]  leading-6 mx-auto">
           We provide you with the best human resources to meet your specific
           business needs. Partner with us to effortlessly double your workforce
           and achieve unprecedented growth and efficiency

@@ -215,7 +215,7 @@ const page = () => {
         workforce to achieve your business goals efficiently.{" "}
       </p>
 
-      <div className="flex flex-row-reverse items-center justify-center gap-20 my-20">
+      <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-20 lg:my-20 md:my-10 my-6">
         <section>
           <figure>
             <Image
@@ -223,19 +223,19 @@ const page = () => {
               alt="team"
               width={1000}
               height={1000}
-              className=" object-cover w-[50em] h-[35em] rounded-2xl"
+              className=" object-cover w-[50em] max-h-[35em] rounded-2xl"
             />
           </figure>
         </section>
 
-        <section className="grid gap-6">
+        <section className="grid gap-6 2xl:max-w-[30%] w-full">
           {careerdetails.map((item, index) => (
             <div key={index} className="">
               <div className="flex items-center gap-4">
                 <p className="text-tertiary">
                   <FaHandPointRight />
                 </p>
-                <h2 className="text-2xl font-semibold border-l border-b rounded-xl shadow-sm w-full p-2">
+                <h2 className="md:text-2xl font-semibold border-l border-b rounded-xl shadow-sm w-full p-2">
                   {item.title}
                 </h2>
               </div>

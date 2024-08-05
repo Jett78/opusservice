@@ -64,7 +64,7 @@ const anotherlink = [
 const Footer: React.FC = () => {
   return (
     <main className="bg-[#224a7f] text-white">
-      <footer className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-6 gap-10 py-14 lg:px-28 md:px-14 px-4 border-b border-gray-100">
+      <footer className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-20  gap-10 py-14 lg:px-28 md:px-14 px-4 border-b border-gray-100">
         <section className="md:space-y-0 space-y-4 grid place-items-center relative">
           <figure className="absolute lg:-top-10 md:-top-10 sm:-top-24 -top-20 -left-6">
             <Image
@@ -119,9 +119,9 @@ const Footer: React.FC = () => {
           </ul>
         </section>
 
-        <section className="space-y-4 flex flex-col sm:items-end ">
+        <section className="md:space-y-8 space-y-4 flex flex-col md:items-end ">
           <h2 className="font-semibold text-lg ">Get Latest Updates</h2>
-          <p className="sm:text-end font-medium text-sm text-gray-300">
+          <p className="md:text-end font-medium text-sm text-gray-300">
             Subscribe to our newsletter and follow us on social media to receive
             timely information.
           </p>
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
             <input
               type="text"
               placeholder="Enter your email"
-              className="pl-4 p-2 bg-white outline-none rounded-tl-xl rounded-bl-xl text-black"
+              className="pl-4 p-2 w-40 bg-white outline-none rounded-tl-xl rounded-bl-xl text-black"
             />
             <button className="bg-gradient-to-r from-[#CC1587] via-[#26538C] to-[#00AFF0] hover:bg-gradient-to-r hover:from-[#00AFF0] hover:via-[#26538C] hover:to-[#CC1587] duration-750 ease-in-out p-2 px-4 font-medium rounded-tr-xl rounded-br-xl">
               Subscribe
@@ -138,16 +138,16 @@ const Footer: React.FC = () => {
         </section>
       </footer>
 
-      <div className="flex flex-wrap whitespace-nowrap md:justify-between justify-center md:px-20 px-4">
-      <div className="py-4 flex items-center gap-1 justify-center">
+      <div className="flex flex-wrap whitespace-nowrap md:justify-between md:gap-20 justify-center md:px-20 py-4 px-4 sm:pb-4 pb-20">
+      <div className=" flex items-center gap-1 justify-center">
           <FaCopyright />
           <h2 className="text-white tracking-wider text-sm">
             2024 <span>|| All Rights Reserved</span>
           </h2>
         </div>
 
-        <div className="py-4 flex items-center gap-1 justify-center">
-          <FaCopyright />
+        <div className=" flex items-center gap-1 justify-center">
+          {/* <FaCopyright /> */}
           <h2 className="text-white tracking-wider text-sm">
             Designed and Developed by <span className=" font-bold">WebX</span>
           </h2>

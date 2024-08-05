@@ -1,36 +1,37 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const blogdata = [
   {
     img: "/servicesimg/services1.jpg",
     title: "What is Remote Closing & Why You Need a Remote Closer",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
+    desc: "Remote closing refers to the process of completing sales transactions and finalizing deals without the necessity for face-to-face interaction..",
     time: "12 July 2024",
   },
   {
     img: "/servicesimg/services2.jpg",
-    title: "What is Remote Closing & Why You Need a Remote Closer",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
+    title: "Need of Construction services Worldwide Due to Low Human Resource",
+    desc: "One of the primary reasons to utilize a remote closer is the ability to expand your reach. By engaging with clients globally, businesses can operate.",
     time: "12 July 2024",
   },
   {
     img: "/servicesimg/services3.jpg",
     title: "Strategic Palnning with Financial Management",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
+    desc: " Moreover, remote closers bring specialized skills focused on closing sales, leading to increased productivity through streamlined digital processes.",
     time: "12 July 2024",
   },
   {
     img: "/servicesimg/services4.jpg",
     title: "Long-term strategic plan with business goals",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, eligendi. Sapiente corporis natus nesciunt vero obcaecati qui et veniam eos.",
+    desc: "Remote closing has gained significant traction, particularly in the context of the global shift towards remote work and digital transformation.",
     time: "12 July 2024",
   },
 ];
-const page:React.FC = () => {
-
+const Page: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<HTMLDivElement>(1);
   const [itemsPerPage, setItemsPerPage] = useState<HTMLDivElement>(6); // Default items per page
 
@@ -74,54 +75,62 @@ const page:React.FC = () => {
         stay ahead in your field.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-c-ls-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto my-10">
         {currentItems.map((item, index) => (
-        <Link  href={`/blog/${startIndex + index}`}>
-          <div key={index} className=" p-4 hover:bg-gray-100 hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg">
-          <figure className="overflow-hidden rounded-lg h-80 hover:scale-95 ease-in-out duration-300">
-          <Image
-              src={item.img}
-              alt="team"
-              width={700}
-              height={1000}
-              className="h-80 object-cover rounded-lg overflow-hidden hover:brightness-50"
-            />
-          </figure>
-            <div className="py-4">
-              <h2 className="font-bold text-xl">{item.title}</h2>
-              <p className="text-[14px] py-2 font-medium text-lighttext">
-                {item.desc}
-              </p>
-              <div>
-                <h2>{item.time}</h2>
+          <Link key={index} href={`/blog/${index}`}>
+            <div
+              key={index}
+              className=" p-4 hover:bg-gray-100 flex flex-col justify-center items-center hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg"
+            >
+              <figure className="overflow-hidden rounded-lg h-80 hover:scale-95 ease-in-out duration-300">
+                <Image
+                  src={item.img}
+                  alt="team"
+                  width={700}
+                  height={1000}
+                  className="h-80 object-cover rounded-lg overflow-hidden hover:brightness-50"
+                />
+              </figure>
+              <div className="py-4">
+                <h2 className="font-bold text-xl">{item.title}</h2>
+                <p className="text-[14px] py-2 font-medium text-lighttext">
+                  {item.desc}
+                </p>
+                <div>
+                  <h2 className="font-sans font-semibold text-sm">
+                    {item.time}
+                  </h2>
+                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
-          </div>
-        </Link>
+          </Link>
         ))}
       </div>
 
-       {/* Pagination Controls */}
-       <div className="flex justify-center gap-4 my-4">
+      {/* Pagination Controls */}
+      <div className="flex justify-center gap-4 my-4">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-4 py-2 text-black font-semibold rounded-md disabled:opacity-50"
+          className="px-2 py-2 text-white bg-black rounded-full font-semibold  disabled:bg-black cursor-pointer"
         >
-          Previous
+          <FaChevronLeft />
         </button>
-        <span className="flex items-center">{currentPage} of {totalPages}</span>
+        <span
+          className="flex items-center font-semibold font-sans">
+          {currentPage} of {totalPages}
+        </span>
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 font-semibold text-black rounded-md disabled:opacity-50"
+          className="px-2 py-2 text-white bg-black rounded-full disabled:bg-black cursor-pointer"
         >
-          Next
+          <FaChevronRight />
         </button>
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

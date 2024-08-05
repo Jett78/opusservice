@@ -42,7 +42,7 @@ const Countries = () => {
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
               pauseOnHover: false,
@@ -51,7 +51,7 @@ const Countries = () => {
         ]
       };
   return (
-    <main className="my-28 bg-gray-50 py-16">
+    <main className="md:my-28 my-10 bg-gray-50 py-16">
     <h2 className="font-bold sm:text-2xl text-xl w-fit mx-auto uppercase text-center">
       Our Operating <span className="text-gradient font-extrabold ">Countries</span>
     </h2>

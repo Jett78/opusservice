@@ -45,16 +45,16 @@ const Page: React.FC = () => {
           </ul> */}
           {servicesdata.map((item, index) => (
             <div key={index} className="grid gap-8">
-              <div className="flex justify-center gap-20">
-                <div className="flex gap-2 ">
-                  <h2 className="font-extrabold text-9xl font-sans">
+              <div className="flex flex-wrap md:justify-center items-start xl:gap-20 md:gap-10 gap-6">
+                <div className="flex gap-2 items-center ">
+                  <h2 className="font-extrabold lg:text-9xl md:text-6xl sm:text-4xl text-4xl font-sans text-gradient">
                     {item.num}
                   </h2>
-                  <h2 className="font-bold text-5xl w-80 ">{item.title}</h2>
+                  <h2 className="font-bold lg:text-5xl md:text-4xl text-2xl max-w-80 ">{item.title}</h2>
                 </div>
 
-                <div className="w-[40em]">
-                  <p className="font-medium text-l text-lighttext">{item.desc}</p>
+                <div className="xl:max-w-[40em]">
+                  <p className="font-medium lg:text-lg text-[14px] text-lighttext">{item.desc}</p>
                 </div>
               </div>
               <figure>

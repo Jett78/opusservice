@@ -1,16 +1,23 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger as GSAPScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import Link from "next/link";
+import CountUp from 'react-countup'
+import ScrollTrigger from "react-scroll-trigger"
+import { useInView } from 'react-intersection-observer';
 
-gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(GSAPScrollTrigger);
 
 const AboutUs: React.FC = () => {
   const counterRef = useRef<HTMLDivElement>(null);
   const aboutContainer = useRef<HTMLDivElement>(null);
+  const [CounterOn,setCounterOn] = useState(false)
+  const { ref, inView } = useInView({ triggerOnce: true });
+
 
   useGSAP(() => {
     const descSplit = new SplitType(".about-desc");
@@ -18,8 +25,8 @@ const AboutUs: React.FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: aboutContainer.current,
-        start: "top 80%",
-        end: "bottom 80%",
+        start: "top bottom",
+        end: "50% 50%",
         scrub: 1,
         // markers: true,
       },
@@ -90,13 +97,10 @@ const AboutUs: React.FC = () => {
 
   return (
     <main>
-      <div className="w-11/12 mx-auto md:my-20 my-8" ref={aboutContainer}>
-        <section className="flex flex-wrap justify-between items-start ">
+      <div className="w-11/12 mx-auto md:my-20 my-8 " ref={aboutContainer}>
+        <section className="flex flex-wrap justify-center items-start ">
           <div className="sm:max-w-[50%] md:sticky top-[5em]">
             <div className="h-[24px] overflow-hidden mb-2">
-              {/* <h2 className="about text-gradient uppercase font-bold text-xl border-b w-fit mb-6 ">
-              About Us
-            </h2> */}
             </div>
             <h1 className="header lg:text-5xl md:text-3xl text-3xl font-bold leading-[1.1em]">
               Outsourcing and outstaffing solutions for sustainable
@@ -105,11 +109,6 @@ const AboutUs: React.FC = () => {
           </div>
 
           <div className="about-img-animate sm:max-w-[50%]">
-            {/* <img
-              src="./chairman.jpg"
-              alt="chairman"
-              className="rounded-lg w-[60em] h-[35em] object-cover brightness-75"
-            /> */}
 
             <p className="about-desc font-medium md:text-xl text-sm text-lighttext my-6">
               In todays rapidly evolving business landscape, companies are
@@ -119,7 +118,7 @@ const AboutUs: React.FC = () => {
               can contribute to sustainable business growth, yet they cater to
               different needs and objectives.
             </p>
-            <button className="mt-4 font-semibold flex items-center animate-bounce">
+            <button className="md:mt-4 font-semibold flex items-center animate-bounce">
               <Link href="/About">
                 <p className="text-gradient ">Read More</p>
               </Link>
@@ -140,15 +139,17 @@ const AboutUs: React.FC = () => {
                 <div key={index} className="grid place-items-center">
                   <h2
                     className="font-extrabold lg:text-6xl md:text-5xl text-4xl"
-                    ref={counterRef}
+                    ref={ref}
                   >
-                    {item.num}
+                  {inView &&  <CountUp start={0} end={item.num} duration={2}/> }
+                   
                   </h2>
 
 
                   <h3 className="font-extrabold md:text-l text-[12px] uppercase pt-2 text-gradient">
                     {item.text}
                   </h3>
+
                 </div>
               ))}
             </div>
@@ -158,18 +159,7 @@ const AboutUs: React.FC = () => {
 
       {/* parallax background */}
       <div className="parallaxbg bg-parallax2 bg-fixed h-[40vh] bg-cover bg-black bg-blend-overlay bg-opacity-50">
-        {/* <div className="text-white flex items-center justify-center gap-28 py-16">
-          {details.map((item, index) => (
-            <div key={index} className="grid place-items-center">
-              <h2 className="font-extrabold text-6xl" ref={counterRef}>
-                {item.num}
-              </h2>
-              <h3 className="font-extrabold text-l uppercase pt-2">
-                {item.text}
-              </h3>
-            </div>
-          ))}
-        </div> */}
+       
       </div>
     </main>
   );
@@ -183,15 +173,15 @@ const details = [
     text: "Incorporation year",
   },
   {
-    num: "6+",
+    num: "6",
     text: "Global Location",
   },
   {
-    num: "5000+",
+    num: "5000",
     text: "Clients Served",
   },
   {
-    num: "45,000+",
+    num: "45000",
     text: "Total Deployed",
   },
 ];

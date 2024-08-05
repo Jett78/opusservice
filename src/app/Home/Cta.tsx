@@ -5,15 +5,15 @@ import React from "react";
 const Cta = () => {
   return (
     <main className="w-11/12 mx-auto my-20">
-      <div className="border bg-[url('/CTA.png')] shadow-md bg-black bg-opacity-70 bg-blend-overlay text-white bg-center rounded-2xl py-24  px-6 w-full h-[30em]">
-         <div className="leading-[60px]">
+      <div className="border bg-[url('/CTA.png')] shadow-md bg-black bg-opacity-70 bg-blend-overlay text-white bg-center rounded-2xl flex flex-col justify-center items-center px-6 w-full h-[30em]">
+         <div className="grid md:gap-6">
          <h2 className="lg:text-[58px] md:text-[40px] sm:text-[30px] text-xl font-bold text-center">
           Boost Your Productivity
         </h2>
         <h2 className="lg:text-[58px] md:text-[40px] sm:text-[30px] text-xl font-bold text-center">
         with Our Manpower Solutions        </h2>
          </div>
-        <p className="text-center font-medium text-sm text-gray-200 tracking-wider max-w-[42em] mx-auto py-4">
+        <p className="text-center font-medium text-sm text-gray-200 tracking-wider max-w-[42em] mx-auto md:py-8 py-4">
           Enhance your efficiency with our tailored manpower services. From
           temporary to long-term staffing, we’ve got the talent you need.
           Contact us today!

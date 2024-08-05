@@ -29,15 +29,15 @@ const locationinfo = [
 
 const Contactus = () => {
   return (
-    <main className=" bg-gray-50 py-20">
-      <div className="w-11/12 mx-auto flex flex-wrap gap-8 justify-between  rounded-2xl">
-        <section className="sm:w-[35%]">
-          <div className="sticky top-[4rem] left-0">
-            <h1 className="header md:text-5xl text-3xl font-bold leading-[1.1em] whitespace-nowrap">
+    <main className=" bg-gray-50 md:py-20 py-6">
+      <div className="w-11/12 mx-auto flex flex-wrap gap-8 justify-center  rounded-2xl">
+        <section className="md:w-[35%]">
+          <div className="sticky top-[6rem] left-0">
+            <h1 className="header lg:text-5xl md:text-3xl text-2xl font-bold leading-[1.1em] whitespace-nowrap">
               Get in
               <span className="text-gradient"> Touch</span>
             </h1>
-            <p className="font-medium text-sm py-4">
+            <p className="font-medium font-sans text-sm py-4">
               we value your inquiries and are here to assist you with any
               questions or concerns.Whether you are looking for more information
               about our services, need support, or want to explore partnership

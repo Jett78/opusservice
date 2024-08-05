@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./Home/Footer";
 import Lenis from 'lenis';
 import Headroom from 'react-headroom';
+import MobileButtons from './components/MobileButtons';
 
 // Initialize Lenis once the component is mounted
 function initializeLenis() {
@@ -36,11 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Headroom>
           <Navbar />
-        </Headroom>
         {children}
         <Footer />
+        <div className='z-100 fixed botom-0'>
+        <MobileButtons/>
+        </div>
       </body>
     </html>
   );0
