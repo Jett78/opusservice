@@ -1,11 +1,53 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const OurTeam = () => {
+interface TeamMember {
+  name: string;
+  img: string;
+  role: string;
+}
+
+const teamdata: TeamMember[] = [
+  {
+    name: "Jane Donald",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+  {
+    name: "Alander Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Marketing Officer",
+  },
+];
+
+const teamdata2: TeamMember[] = [
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+  {
+    name: "Alander Donald",
+    img: "/team/team1.jpg",
+    role: "Chief Marketing Officer",
+  },
+  {
+    name: "Rajesh Hamal",
+    img: "/team/team1.jpg",
+    role: "Chief Technical Officer",
+  },
+  {
+    name: "Jane Doe",
+    img: "/team/team1.jpg",
+    role: "Chief Executive Officer",
+  },
+];
+
+const OurTeam: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [hoveredIndex2, setHoveredIndex2] = useState<number | null>(null);
 
@@ -31,7 +73,7 @@ const OurTeam = () => {
       </p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 place-items-center md:w-7/12 w-11/12 mx-auto justify-center gap-10 my-20 group cursor-pointer">
-        {teamdata.map((item:any, index) => (
+        {teamdata.map((item, index) => (
           <div
             key={index}
             className="relative group"
@@ -56,7 +98,7 @@ const OurTeam = () => {
             >
               <div className="grid place-items-center whitespace-nowrap py-2 ">
                 <h2 className="font-bold text-xl">{item.name}</h2>
-                <h3 className="font-semibold  text-sm italic tracking-wide">
+                <h3 className="font-semibold text-sm italic tracking-wide">
                   {item.role}
                 </h3>
               </div>
@@ -66,7 +108,7 @@ const OurTeam = () => {
       </div>
 
       <div className="md:grid hidden lg:grid-cols-4 grid-cols-2 place-items-center w-10/12 mx-auto justify-center gap-10 my-20 group cursor-pointer">
-        {teamdata2.map((item:any, index) => (
+        {teamdata2.map((item, index) => (
           <div
             key={index}
             className="relative group"
@@ -91,7 +133,7 @@ const OurTeam = () => {
             >
               <div className="grid place-items-center whitespace-nowrap py-2 ">
                 <h2 className="font-bold text-xl">{item.name}</h2>
-                <h3 className="font-semibold  text-sm italic tracking-wide">
+                <h3 className="font-semibold text-sm italic tracking-wide">
                   {item.role}
                 </h3>
               </div>
@@ -103,7 +145,7 @@ const OurTeam = () => {
       {/* slider for smaller screens */}
       <div className="cursor-pointer md:hidden block mx-6">
         <Slider {...settings}>
-          {teamdata2.map((item:any, index) => (
+          {teamdata2.map((item, index) => (
             <div
               key={index}
               className="relative group "
@@ -128,7 +170,7 @@ const OurTeam = () => {
               >
                 <div className="grid place-items-center whitespace-nowrap py-2 ">
                   <h2 className="font-bold text-xl">{item.name}</h2>
-                  <h3 className="font-semibold  text-sm italic tracking-wide">
+                  <h3 className="font-semibold text-sm italic tracking-wide">
                     {item.role}
                   </h3>
                 </div>
@@ -142,65 +184,3 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
-
-const teamdata = [
-  {
-    name: "Jane Donald",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-  {
-    name: "Alander Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Marketting Officer",
-  },
-];
-const teamdata2 = [
-  {
-    name: "Jane Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-  {
-    name: "Alander Donald",
-    img: "/team/team1.jpg",
-    role: "Chief Marketting Officer",
-  },
-  {
-    name: "Rajesh Hamal",
-    img: "/team/team1.jpg",
-    role: "Chief Technical Officer",
-  },
-  {
-    name: "Jane Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-];
-const teamdata3 = [
-  {
-    name: "Jane Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-  {
-    name: "Alander Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Marketting Officer",
-  },
-  {
-    name: "Rajesh Hamal",
-    img: "/team/team1.jpg",
-    role: "Chief Technical Officer",
-  },
-  {
-    name: "Jane Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-  {
-    name: "Jane Doe",
-    img: "/team/team1.jpg",
-    role: "Chief Executive Officer",
-  },
-];
