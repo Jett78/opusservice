@@ -12,7 +12,7 @@ const Page = () => {
       <Vision/>
       <HowweWork/>
       <TrustComponent/>
-      <OurTeam/>
+      {/* <OurTeam/> */}
       <Countries/>
       <Certificates/>
   
