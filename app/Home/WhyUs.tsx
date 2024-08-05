@@ -109,7 +109,7 @@ const WhyUs = () => {
 
         <section className="sm:max-w-[50%] lg:grid-cols-2  grid-cols-1 grid gap-x-4">
           <div className="space-y-6">
-            {whyusdata.slice(0, 2).map((item, index) => (
+            {whyusdata.slice(0, 2).map((item:any, index) => (
               <div
                 key={index}
                 className="box-animate border border-[#00AFF0] rounded-lg max-w-200 p-4 cursor-pointer group relative"
@@ -132,7 +132,7 @@ const WhyUs = () => {
           </div>
 
           <div className="space-y-6 mt-6">
-            {whyusdata.slice(2, 4).map((item, index) => (
+            {whyusdata.slice(2, 4).map((item:any, index) => (
               <div
                 key={index}
                 className="box-animate border border-[#00AFF0] rounded-lg max-w-200 p-4 cursor-pointer group relative"

@@ -18,7 +18,7 @@ const HowweWork = () => {
 
 
         <section className="grid gap-6 xl:grid-cols-1 md:grid-cols-2">
-            {howwork.map((item,index) => (
+            {howwork.map((item:any,index) => (
                 <div key={index} className="flex items-start gap-4">
                       <div className="gradient h-4 w-4 rounded-full mt-3"></div>
                       <div>

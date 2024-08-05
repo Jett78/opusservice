@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
         <section className="grid sm:items-center xl:place-items-center md:place-items-end place-items-start ">
           <h2 className="font-semibold text-lg">Quick Links</h2>
           <ul className="space-y-2 mt-4 text-gray-300 text-sm  font-medium">
-            {navdata.map((item, index) => (
+            {navdata.map((item:any, index) => (
               <div key={index} className="hover:text-white">
                 <Link href={item.path}>{item.title}</Link>
               </div>
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
         <section className="grid sm:items-center xl:place-items-center md:place-items-start place-items-start ">
           <h2 className="font-semibold text-lg">Our Services</h2>
           <ul className="space-y-2 mt-4 text-gray-300 text-sm  font-medium">
-            {anotherlink.map((item, index) => (
+            {anotherlink.map((item:any, index) => (
               <div key={index} className="hover:text-white">
                 <Link href={item.path}>{item.title}</Link>
               </div>

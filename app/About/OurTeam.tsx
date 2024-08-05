@@ -31,7 +31,7 @@ const OurTeam = () => {
       </p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 place-items-center md:w-7/12 w-11/12 mx-auto justify-center gap-10 my-20 group cursor-pointer">
-        {teamdata.map((item, index) => (
+        {teamdata.map((item:any, index) => (
           <div
             key={index}
             className="relative group"
@@ -66,7 +66,7 @@ const OurTeam = () => {
       </div>
 
       <div className="md:grid hidden lg:grid-cols-4 grid-cols-2 place-items-center w-10/12 mx-auto justify-center gap-10 my-20 group cursor-pointer">
-        {teamdata2.map((item, index) => (
+        {teamdata2.map((item:any, index) => (
           <div
             key={index}
             className="relative group"
@@ -103,7 +103,7 @@ const OurTeam = () => {
       {/* slider for smaller screens */}
       <div className="cursor-pointer md:hidden block mx-6">
         <Slider {...settings}>
-          {teamdata2.map((item, index) => (
+          {teamdata2.map((item:any, index) => (
             <div
               key={index}
               className="relative group "

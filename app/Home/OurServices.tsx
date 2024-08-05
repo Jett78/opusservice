@@ -99,7 +99,7 @@ const OurServices: React.FC = () => {
         </section>
 
         <section className="md:flex hidden gap-4 overflow-x-clip">
-          {services.map((item, index) => (
+          {services.map((item:any, index) => (
             <div
               key={index}
               className="relative sm:w-[32em] w-[20em] h-[20em] sm:h-[35em] flex-shrink-0 hover:scale-90 duration-300 ease-in-out cursor-pointer overflow-hidden"
@@ -153,7 +153,7 @@ const OurServices: React.FC = () => {
 
     <section className="md:hidden block mx-2 my-6">
     <Slider {...settings}>
-      {services.map((item, index) => (
+      {services.map((item:any, index) => (
         <div
           key={index}
           className="relative sm:w-[32em] w-[20em] h-[20em] sm:h-[35em] flex-shrink-0  cursor-pointer overflow-hidden "

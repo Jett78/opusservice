@@ -67,7 +67,7 @@ const Contactus = () => {
         </section>
         <section className="md:w-[55%]">
           <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1  grid-cols-2 gap-y-2 gap-x-2">
-            {locationinfo.map((item, index) => (
+            {locationinfo.map((item:any, index) => (
               <div
                 key={index}
                 className="border shadow-md hover:shadow-lg duration-300 ease-in-out bg-white w-full sm:h-40 rounded-xl p-8 flex flex-col gap-2 items-center justify-center cursor-pointer "

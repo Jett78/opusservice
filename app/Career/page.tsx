@@ -115,7 +115,7 @@
 //       </p>
 
 //       <div className="w-11/12 mx-auto sm:w-full flex flex-wrap gap-10 justify-center my-10">
-//         {currentItems.map((item, index) => (
+//         {currentItems.map((item:any, index) => (
 //           <div
 //             key={index}
 //             className="border group hover:bg-gray-100 ease-in-out duration-300 cursor-pointer border-[#00AFF0] rounded-lg p-6 sm:w-[25%]"
@@ -229,7 +229,7 @@ const page = () => {
         </section>
 
         <section className="grid gap-6 2xl:max-w-[30%] w-full">
-          {careerdetails.map((item, index) => (
+          {careerdetails.map((item:any, index) => (
             <div key={index} className="">
               <div className="flex items-center gap-4">
                 <p className="text-tertiary">

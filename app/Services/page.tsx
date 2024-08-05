@@ -29,7 +29,7 @@ const Page: React.FC = () => {
       <div className="my-10">
         <div className="grid gap-20">
           {/* <ul className="grid gap-2 sticky top-[10em]">
-            {servicesdata.map((item, index) => (
+            {servicesdata.map((item:any, index) => (
               <li
                 key={index}
                 className={`cursor-pointer font-bold text-xl whitespace-nowrap border-b border-l  p-2 ${
@@ -43,7 +43,7 @@ const Page: React.FC = () => {
               </li>
             ))}
           </ul> */}
-          {servicesdata.map((item, index) => (
+          {servicesdata.map((item:any, index) => (
             <div key={index} className="grid gap-8">
               <div className="flex flex-wrap md:justify-center items-start xl:gap-20 md:gap-10 gap-6">
                 <div className="flex gap-2 items-center ">

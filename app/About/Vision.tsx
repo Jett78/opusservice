@@ -51,7 +51,7 @@ const Vision = () => {
       {/* parallax background */}
       <div className="parallaxbg bg-parallax2 bg-fixed sm:max-h-[30vh] bg-cover bg-black bg-blend-overlay bg-opacity-50 mt-20">
         <div className="text-white grid sm:grid-cols-4 grid-cols-2 items-center justify-center gap-x-4 gap-y-14 py-16">
-          {details.map((item, index) => (
+          {details.map((item:any, index) => (
             <div key={index} className="grid place-items-center">
               <h2 className="font-extrabold lg:text-6xl md:text-4xl text-3xl">
                 {item.num}
@@ -66,7 +66,7 @@ const Vision = () => {
 
       <div className=" md:py-40 py-20  bg-gray-50">
         <div className="w-11/12 mx-auto flex flex-wrap justify-center md:gap-8 gap-12">
-        {aboutdata.map((item, index) => (
+        {aboutdata.map((item:any, index) => (
           <div key={index} className="relative group">
             <div
               className="rounded-2xl max-w-[22em] h-[20em] p-4 relative "

@@ -135,7 +135,7 @@ const AboutUs: React.FC = () => {
               </svg>
             </button>
             <div className="text-black grid grid-cols-2 items-center justify-center gap-10 py-10">
-              {details.map((item, index) => (
+              {details.map((item:any, index) => (
                 <div key={index} className="grid place-items-center">
                   <h2
                     className="font-extrabold lg:text-6xl md:text-5xl text-4xl"

@@ -2,10 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const blogdata = [
+interface BlogData {
+  img: string;
+  title: string;
+  desc: string;
+  time: string;
+}
+
+const blogdata: BlogData[] = [
   {
     img: "/servicesimg/services1.jpg",
     title: "What is Remote Closing & Why You Need a Remote Closer",
@@ -31,9 +37,10 @@ const blogdata = [
     time: "12 July 2024",
   },
 ];
+
 const Page: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<HTMLDivElement>(1);
-  const [itemsPerPage, setItemsPerPage] = useState<HTMLDivElement>(6); // Default items per page
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(6); // Default items per page
 
   useEffect(() => {
     // Update itemsPerPage based on screen size
@@ -63,12 +70,13 @@ const Page: React.FC = () => {
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = blogdata.slice(startIndex, startIndex + itemsPerPage);
+
   return (
-    <div className=" pt-10">
+    <div className="pt-10">
       <h2 className="font-extrabold text-3xl uppercase text-gradient w-fit mx-auto">
         Featured Blogs
       </h2>
-      <p className=" font-medium text-md max-w-[60em] md:mx-auto mx-2 sm:text-l text-sm py-2 text-center">
+      <p className="font-medium text-md max-w-[60em] md:mx-auto mx-2 sm:text-l text-sm py-2 text-center">
         Stay updated with the latest insights and trends in the industry through
         our featured blogs. Our expert-written articles cover a wide array of
         topics, offering valuable information and practical advice to help you
@@ -76,16 +84,16 @@ const Page: React.FC = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto my-10">
-        {currentItems.map((item, index) => (
+        {currentItems.map((item:any, index) => (
           <Link key={index} href={`/blog/${index}`}>
             <div
               key={index}
-              className=" p-4 hover:bg-gray-100 flex flex-col justify-center items-center hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg"
+              className="p-4 hover:bg-gray-100 flex flex-col justify-center items-center hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg"
             >
               <figure className="overflow-hidden rounded-lg h-80 hover:scale-95 ease-in-out duration-300">
                 <Image
                   src={item.img}
-                  alt="team"
+                  alt="blog"
                   width={700}
                   height={1000}
                   className="h-80 object-cover rounded-lg overflow-hidden hover:brightness-50"
@@ -101,7 +109,6 @@ const Page: React.FC = () => {
                     {item.time}
                   </h2>
                 </div>
-                <div></div>
               </div>
             </div>
           </Link>
@@ -113,12 +120,11 @@ const Page: React.FC = () => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-2 py-2 text-white bg-black rounded-full font-semibold  disabled:bg-black cursor-pointer"
+          className="px-2 py-2 text-white bg-black rounded-full font-semibold disabled:bg-black cursor-pointer"
         >
           <FaChevronLeft />
         </button>
-        <span
-          className="flex items-center font-semibold font-sans">
+        <span className="flex items-center font-semibold font-sans">
           {currentPage} of {totalPages}
         </span>
         <button

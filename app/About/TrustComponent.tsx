@@ -105,7 +105,7 @@ const TrustComponent = () => {
 
       <div className="bg-gray-50 mt-10">
       <Slider {...settings}>
-        {companies.map((item,index) => (
+        {companies.map((item:any,index) => (
             <div key={index}>
                 <Image src={item.img} alt="icons-company" width={100} height={100} className=' object-cover rounded-lg' />
             </div>
@@ -115,7 +115,7 @@ const TrustComponent = () => {
 
       <div className="bg-gray-50 pt-6">
       <Slider {...settings2}>
-        {companies.map((item,index) => (
+        {companies.map((item:any,index) => (
             <div key={index}>
                 <Image src={item.img} alt="icons-company" width={100} height={100} className=' object-cover rounded-lg' />
             </div>

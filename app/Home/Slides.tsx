@@ -59,7 +59,7 @@ const Slides = () => {
         {/* <div className="absolute right-0 top-0 w-[15rem] z-30 bg-gradient-to-l from-white via-white  to-transparent h-full"></div> */}
 
       <Slider {...settings}>
-        {companies.map((item,index) => (
+        {companies.map((item:any,index) => (
             <div key={index} className="">
                 <Image src={item.img} alt="icons-company" width={100} height={100} className=' object-cover rounded-lg' />
             </div>

@@ -58,7 +58,7 @@ const Countries = () => {
 
     <div className="bg-gray-50 mt-10">
     <Slider {...settings}>
-      {countryflags.map((item,index) => (
+      {countryflags.map((item:any,index) => (
           <div key={index}>
               <Image src={item.img} alt="icons-company" width={100} height={100} className=' rounded-lg w-[6em] h-[4em] object-cover' />
           </div>

@@ -33,7 +33,7 @@ const Testimoinals:React.FC = () => {
 
         <div className=" sm:mx-40 mx-6 text-center mt-10 relative">
           <Slider {...settings}>
-            {testimonialsdata.map((item, index) => (
+            {testimonialsdata.map((item:any, index) => (
               <div key={index}>
                 <div className="flex text-2xl text-orange-400 justify-center">
                   {[...Array(5)].map((_, index) => (
