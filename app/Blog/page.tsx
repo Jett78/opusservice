@@ -42,27 +42,27 @@ const Page: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(6); // Default items per page
 
-  useEffect(() => {
-    const updateItemsPerPage = () => {
-      if (window.innerWidth < 640) {
-        setItemsPerPage(3);
-      } else {
-        setItemsPerPage(6);
-      }
-    };
+  // useEffect(() => {
+  //   const updateItemsPerPage = () => {
+  //     if (window.innerWidth < 640) {
+  //       setItemsPerPage(3);
+  //     } else {
+  //       setItemsPerPage(6);
+  //     }
+  //   };
 
-    // Check for window object existence before updating items per page
-    if (typeof window !== "undefined") {
-      updateItemsPerPage();
-      window.addEventListener("resize", updateItemsPerPage);
-    }
+  //   // Check for window object existence before updating items per page
+  //   if (typeof window !== "undefined") {
+  //     updateItemsPerPage();
+  //     window.addEventListener("resize", updateItemsPerPage);
+  //   }
 
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", updateItemsPerPage);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (typeof window !== "undefined") {
+  //       window.removeEventListener("resize", updateItemsPerPage);
+  //     }
+  //   };
+  // }, []);
 
   const totalPages = Math.ceil(blogdata.length / itemsPerPage);
 

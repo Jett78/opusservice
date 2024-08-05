@@ -27,7 +27,7 @@ const OurServices: React.FC = () => {
   };
   // useGSAP(() => {
   //   const main = mainRef.current;
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    // const mediaQuery = window.matchMedia("(min-width: 768px)");
 
     // if (mediaQuery.matches) {
     //   gsap.to(main, {
@@ -56,13 +56,13 @@ const OurServices: React.FC = () => {
       if (mainRef.current && containerRef.current) {
         const totalScrollWidth = mainRef.current.scrollWidth;
         const visibleWidth = containerRef.current.offsetWidth;
-        if (mediaQuery.matches) {
+        // if (mediaQuery.matches) {
         tl.to(mainRef.current, {
           x: -(totalScrollWidth - visibleWidth) - 100,
           duration: 5,
         });
       }
-    }
+    // }
     });
   // }, []);
 

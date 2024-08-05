@@ -22,7 +22,7 @@ const navdata = [
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "/Blog",
   },
   {
     title: "Contact us",
