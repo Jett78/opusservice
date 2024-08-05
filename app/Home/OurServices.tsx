@@ -27,7 +27,6 @@ const OurServices: React.FC = () => {
   };
   // useGSAP(() => {
   //   const main = mainRef.current;
-    // const mediaQuery = window.matchMedia("(min-width: 768px)");
 
     // if (mediaQuery.matches) {
     //   gsap.to(main, {
