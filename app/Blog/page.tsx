@@ -26,7 +26,7 @@ const blogdata: BlogData[] = [
   },
   {
     img: "/servicesimg/services3.jpg",
-    title: "Strategic Palnning with Financial Management",
+    title: "Strategic Planning with Financial Management",
     desc: " Moreover, remote closers bring specialized skills focused on closing sales, leading to increased productivity through streamlined digital processes.",
     time: "12 July 2024",
   },
@@ -43,7 +43,6 @@ const Page: React.FC = () => {
   const [itemsPerPage, setItemsPerPage] = useState<number>(6); // Default items per page
 
   useEffect(() => {
-    // Update itemsPerPage based on screen size
     const updateItemsPerPage = () => {
       if (window.innerWidth < 640) {
         setItemsPerPage(3);
@@ -52,11 +51,16 @@ const Page: React.FC = () => {
       }
     };
 
-    updateItemsPerPage();
-    window.addEventListener("resize", updateItemsPerPage);
+    // Check for window object existence before updating items per page
+    if (typeof window !== "undefined") {
+      updateItemsPerPage();
+      window.addEventListener("resize", updateItemsPerPage);
+    }
 
     return () => {
-      window.removeEventListener("resize", updateItemsPerPage);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", updateItemsPerPage);
+      }
     };
   }, []);
 
@@ -84,8 +88,8 @@ const Page: React.FC = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto my-10">
-        {currentItems.map((item:any, index) => (
-          <Link key={index} href={`/blog/${index}`}>
+        {currentItems.map((item, index) => (
+          <Link key={index} href={`/Blog/${index}`}>
             <div
               key={index}
               className="p-4 hover:bg-gray-100 flex flex-col justify-center items-center hover:border-tertiary ease-in-out duration-300 hover:shadow-sm rounded-lg"
