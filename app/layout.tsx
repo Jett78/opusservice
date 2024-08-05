@@ -3,11 +3,11 @@
 import { useEffect } from 'react';
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "../src/components/Navbar";
 import Footer from "./Home/Footer";
 import Lenis from 'lenis';
 import Headroom from 'react-headroom';
-import MobileButtons from './components/MobileButtons';
+import MobileButtons from '../src/components/MobileButtons';
 
 // Initialize Lenis once the component is mounted
 function initializeLenis() {
