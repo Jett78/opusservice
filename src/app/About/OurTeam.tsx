@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const OurTeam = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [hoveredIndex2, setHoveredIndex2] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex2, setHoveredIndex2] = useState<number | null>(null);
 
   const settings = {
     dots: true,
