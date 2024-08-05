@@ -47,12 +47,12 @@ const Testimoinals:React.FC = () => {
             ))}
           </Slider>
 
-          <div className="absolute sm:text-6xl text-2xl sm:bottom-[3em] bottom-[12em]  opacity-50 text-tertiary">
+          {/* <div className="absolute sm:text-6xl text-2xl sm:bottom-[3em] bottom-[12em]  opacity-50 text-tertiary">
             <ImQuotesLeft />
           </div>
           <div className="absolute sm:text-6xl text-2xl sm:bottom-16 bottom-28 right-0 opacity-50 text-tertiary">
             <ImQuotesRight />
-          </div>
+          </div> */}
         </div>
       </div>
     </main>
